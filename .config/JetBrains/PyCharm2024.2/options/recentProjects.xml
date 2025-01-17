@@ -1,0 +1,69 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$APPLICATION_CONFIG_DIR$/light-edit">
+          <value>
+            <RecentProjectMetaInfo frameTitle="PyCharm" hidden="true" projectWorkspaceId="2l000fb3DD9pnWTPqPEgjyKkH36">
+              <option name="activationTimestamp" value="1729779621856" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="260" y="68" width="1400" height="992" extendedState="6" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Dev/python/2048">
+          <value>
+            <RecentProjectMetaInfo frameTitle="2048 – main.py" projectWorkspaceId="2kbm2854cvxb09DvkXtSNDu7wVB">
+              <option name="activationTimestamp" value="1731389675785" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-242.23726.102" />
+              <option name="buildTimestamp" value="1729624860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="0" y="0" width="1920" height="1080" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1731389408259" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Dev/python/Cypher">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Cypher – des_algorithm.py" projectWorkspaceId="2kvEMzKTvOXnRQzIpjtYvkLyPsy">
+              <option name="activationTimestamp" value="1731391000755" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-242.23726.102" />
+              <option name="buildTimestamp" value="1729624860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="7" />
+              </option>
+              <frame x="0" y="0" width="1920" height="1080" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1731389700234" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Dev/python/ShoesSraper">
+          <value>
+            <RecentProjectMetaInfo frameTitle="ShoesSraper – scraper.py" opened="true" projectWorkspaceId="2ojlrNS7gi7e8siaoNv2MOmqPZw">
+              <option name="activationTimestamp" value="1731391367514" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-242.23726.102" />
+              <option name="buildTimestamp" value="1729624860000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="1" />
+              </option>
+              <frame x="260" y="40" width="1400" height="1000" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1731391063783" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/Dev/python/ShoesSraper" />
+    <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects" />
+  </component>
+</application>

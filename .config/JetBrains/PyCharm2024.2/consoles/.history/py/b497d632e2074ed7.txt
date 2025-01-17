@@ -1,0 +1,349 @@
+SBOX = [[[14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
+         [0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8],
+         [4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0],
+         [15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13]],
+
+        [[15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10],
+         [3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5],
+         [0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15],
+         [13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9]],
+
+        [[10, 0, 9, 14, 6, 3, 15, 5, 1, 13, 12, 7, 11, 4, 2, 8],
+         [13, 7, 0, 9, 3, 4, 6, 10, 2, 8, 5, 14, 12, 11, 15, 1],
+         [13, 6, 4, 9, 8, 15, 3, 0, 11, 1, 2, 12, 5, 10, 14, 7],
+         [1, 10, 13, 0, 6, 9, 8, 7, 4, 15, 14, 3, 11, 5, 2, 12]],
+
+        [[7, 13, 14, 3, 0, 6, 9, 10, 1, 2, 8, 5, 11, 12, 4, 15],
+         [13, 8, 11, 5, 6, 15, 0, 3, 4, 7, 2, 12, 1, 10, 14, 9],
+         [10, 6, 9, 0, 12, 11, 7, 13, 15, 1, 3, 14, 5, 2, 8, 4],
+         [3, 15, 0, 6, 10, 1, 13, 8, 9, 4, 5, 11, 12, 7, 2, 14]],
+
+        [[2, 12, 4, 1, 7, 10, 11, 6, 8, 5, 3, 15, 13, 0, 14, 9],
+         [14, 11, 2, 12, 4, 7, 13, 1, 5, 0, 15, 10, 3, 9, 8, 6],
+         [4, 2, 1, 11, 10, 13, 7, 8, 15, 9, 12, 5, 6, 3, 0, 14],
+         [11, 8, 12, 7, 1, 14, 2, 13, 6, 15, 0, 9, 10, 4, 5, 3]],
+
+        [[12, 1, 10, 15, 9, 2, 6, 8, 0, 13, 3, 4, 14, 7, 5, 11],
+         [10, 15, 4, 2, 7, 12, 9, 5, 6, 1, 13, 14, 0, 11, 3, 8],
+         [9, 14, 15, 5, 2, 8, 12, 3, 7, 0, 4, 10, 1, 13, 11, 6],
+         [4, 3, 2, 12, 9, 5, 15, 10, 11, 14, 1, 7, 6, 0, 8, 13]],
+
+        [[4, 11, 2, 14, 15, 0, 8, 13, 3, 12, 9, 7, 5, 10, 6, 1],
+         [13, 0, 11, 7, 4, 9, 1, 10, 14, 3, 5, 12, 2, 15, 8, 6],
+         [1, 4, 11, 13, 12, 3, 7, 14, 10, 15, 6, 8, 0, 5, 9, 2],
+         [6, 11, 13, 8, 1, 4, 10, 7, 9, 5, 0, 15, 14, 2, 3, 12]],
+
+        [[13, 2, 8, 4, 6, 15, 11, 1, 10, 9, 3, 14, 5, 0, 12, 7],
+         [1, 15, 13, 8, 10, 3, 7, 4, 12, 5, 6, 11, 0, 14, 9, 2],
+         [7, 11, 4, 1, 9, 12, 14, 2, 0, 6, 10, 13, 15, 3, 5, 8],
+         [2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11]]]
+
+
+def hex2bin(hex_val):
+    int_val = int("0x" + hex_val, 16)
+    bin_val = str(bin(int_val))[2:]
+    bin_val = "0" * (64 - len(bin_val)) + bin_val
+    return bin_val
+
+
+def bin2hex(bin_val):
+    int_val = int(bin_val, 2)
+    hex_val = hex(int_val).upper()[2:]
+    return hex_val
+
+
+def split_text(text):
+    half_len = len(text) // 2
+    return text[:half_len], text[half_len:]
+
+
+def init_perm(text):
+    temp = ""
+    col = 57
+    while True:
+        if col == 64:
+            break
+        i = col
+        while i >= 0:
+            temp += text[i]
+            i -= 8
+        col += 2
+        if col == 65:
+            col = 56
+
+    return temp
+
+
+def split_and_shift(key, round_n):
+    ls1 = [0, 1, 8, 15]
+    l_key, r_key = split_text(key)
+
+    shift = 1 if round_n in ls1 else 2
+
+    def fn(x): return (x[shift:] + x[:shift])
+
+    l_key, r_key = [fn(x) for x in [l_key, r_key]]
+
+    return l_key, r_key
+
+
+def perm_choice_1(key):
+    key_comp = [57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18,
+                10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36,
+                63, 55, 47, 39, 31, 23, 15, 7, 62, 54, 46, 38, 30, 22,
+                14, 6, 61, 53, 45, 37, 29, 21, 13, 5, 28, 20, 12, 4]
+
+    pc1_key = ""
+
+    for x in key_comp:
+        pc1_key += key[x-1]
+
+    return pc1_key
+
+
+def perm_choice_2(key):
+    key_comp = [14, 17, 11, 24, 1, 5, 3, 28, 15, 6, 21, 10,
+                23, 19, 12, 4, 26, 8, 16, 7, 27, 20, 13, 2,
+                41, 52, 31, 37, 47, 55, 30, 40, 51, 45, 33, 48,
+                44, 49, 39, 56, 34, 53, 46, 42, 50, 36, 29, 32]
+
+    pc2_key = ""
+
+    for x in key_comp:
+        pc2_key += key[x - 1]
+
+    return pc2_key
+
+
+def expansion_perm(text):
+    split = 4
+    i = 0
+    split_list = []
+    while i < len(text):
+        split_list.append(text[i: i + split])
+        i += split
+
+    text_temp = ""
+    for i, x in enumerate(split_list):
+        bit1 = split_list[(i - 1) % 8][3]
+        bit32 = split_list[(i + 1) % 8][0]
+
+        text_temp += bit1 + "".join(x) + bit32
+
+    return text_temp
+
+
+def s_box_conv(text):
+    split = 6
+    i = 0
+    split_list = []
+    while i < len(text):
+        split_list.append(text[i: i + split])
+        i += split
+
+    op = ""
+    for txt, sbox in zip(split_list, SBOX):
+        row = txt[0] + txt[-1]
+        col = txt[1:-1]
+        # print(row, col, txt)
+
+        row, col = [int(x, 2) for x in [row, col]]
+        sbox_op = bin(sbox[row][col]).replace('0b', '')
+        sbox_op = '0' * (4 - len(sbox_op)) + sbox_op
+        op += sbox_op
+
+    return op
+
+
+def p_box_conv(text):
+    perm = [16, 7, 20, 21, 29, 12, 28, 17,  1, 15, 23, 26,  5, 18, 31, 10,
+            2, 8, 24, 14, 32, 27,  3,  9, 19, 13, 30,  6, 22, 11,  4, 25]
+
+    op = ''
+    for x in perm:
+        op += text[x-1]
+
+    return op
+
+
+def round_fn(ptext, round_key):
+    l_txt, r_txt = split_text(ptext)
+
+    r_txt_emp = expansion_perm(r_txt)
+
+    xor_output = bin(int(r_txt_emp, 2) ^ int(round_key, 2)).replace('0b', '')
+    xor_output = '0' * (48 - len(xor_output)) + xor_output
+    # print(bin2hex(xor_output), "xor_op")
+    # print(bin2hex(round_key), "rk")
+
+    s_box_op = s_box_conv(xor_output)
+    p_box_op = p_box_conv(s_box_op)
+
+    # print(p_box_op, l_txt, sep='\n')
+
+    r_txt_i = bin(int(p_box_op, 2) ^ int(l_txt, 2)).replace('0b', '')
+    r_txt_i = '0' * (32 - len(r_txt_i)) + r_txt_i
+
+    return r_txt + r_txt_i
+
+
+def final_perm(text):
+    flag = True
+
+    final_op = ""
+    for i in range(40, 32, -1):
+        flag = True
+        j = i - 32
+        while i <= 64 or not flag:
+            if flag:
+                final_op += text[i-1]
+                i += 8
+                flag = False
+            else:
+                final_op += text[j-1]
+                j += 8
+                flag = True
+
+    return final_op
+
+
+def encrypt64(ptext, key, verbose=True):
+
+    bin_ptext = hex2bin(ptext)
+    bin_key = hex2bin(key)
+
+    init_ptext = init_perm(bin_ptext)
+    eff_key = perm_choice_1(bin_key)
+
+    for rn in range(16):
+        l_key, r_key = split_and_shift(eff_key, rn)
+        round_key = perm_choice_2(l_key + r_key)
+
+        eff_key = l_key + r_key
+
+        rn_op = round_fn(init_ptext, round_key)
+        init_ptext = rn_op
+
+        rk_hex = bin2hex(round_key)
+        op_hex = bin2hex(rn_op)
+        if verbose:
+            print("Round:", str(rn+1).rjust(2, " "),
+                  rk_hex.rjust(12, '0'), op_hex.rjust(16, '0'), sep='  ')
+
+    if verbose:
+        print("")
+    l_op, r_op = split_text(hex2bin(op_hex))
+    final_op = bin2hex(final_perm(r_op + l_op)).rjust(16, '0')
+
+    return final_op
+
+
+def decrypt64(enc, key, verbose=True):
+
+    bin_enc = hex2bin(enc)
+    bin_key = hex2bin(key)
+
+    init_bin_enc = init_perm(bin_enc)
+    eff_key = perm_choice_1(bin_key)
+
+    keys = []
+    for i in range(16):
+        lk, rk = split_and_shift(eff_key, i)
+        round_key = perm_choice_2(lk + rk)
+
+        keys.append(round_key)
+        eff_key = lk + rk
+
+    keys = keys[::-1]
+    for rn in range(16):
+        rn_op = round_fn(init_bin_enc, keys[rn])
+        init_bin_enc = rn_op
+
+        rn_hex = bin2hex(rn_op)
+        rk_hex = bin2hex(keys[rn])
+
+        if verbose:
+            print("Round:", str(rn+1).rjust(2, ' '),
+                  rk_hex.rjust(12, '0'), rn_hex.rjust(16, '0'), sep='  ')
+
+    if verbose:
+        print("")
+    l_op, r_op = split_text(hex2bin(rn_hex))
+    final_op = bin2hex(final_perm(r_op + l_op)).rjust(16, "0")
+
+    return final_op
+
+
+def encrypt(ptext, key):
+    ptext_byte = str(ptext.encode('utf-8').hex())
+    # ptext_byte = ptext
+    output = ""
+
+    i = 0
+    while True:
+        if i >= len(ptext_byte):
+            break
+        sp_text = ptext_byte[i: i + 16]
+        print(sp_text)
+        enc = encrypt64(sp_text, key, verbose=1)
+        output += enc
+
+        i += 16
+
+    return output
+
+
+def decrypt(cyptext, key):
+    output = ""
+
+    i = 0
+    while True:
+        if i >= len(cyptext):
+            break
+        sp_text = cyptext[i: i + 16]
+        dec = decrypt64(sp_text, key, verbose=1)
+        temp = dec.rjust(16, "0")
+
+        for x in range(0, len(temp), 2):
+            output += chr(int(temp[x:x+2], 16))
+
+        i += 16
+
+    return output
+
+
+key = "AABB09182736CCDD"
+
+# ptext = "KARTIKPARABHELLOWORLDHOWAREYOUIAMFINE123123123"
+mode = int(input("Enter the required mode [1] Text mode [2] Byte mode: "))
+ptext = input("Enter the string to be Encrypted: ")
+
+# mode = 1
+
+print("Encyption: ")
+
+if mode == 1:
+    enc_ptext = encrypt(ptext, key)
+else:
+    enc_ptext = encrypt64(ptext, key)
+
+print("\n\nDecryption: ")
+if mode == 1:
+    dec_ptext = decrypt(enc_ptext, key)
+else:
+    dec_ptext = decrypt64(enc_ptext, key)
+
+print("\n\nPLAINTEXT: ", ptext)
+print("ENCRYPTED: ", enc_ptext)
+print("DECRYPTED: ", dec_ptext)
+
+-. . -..- - / . -. - .-. -.--
+4b50313020596f72
+-. . -..- - / . -. - .-. -.--
+len("")
+len("4b50313020596f72")
+
+-. . -..- - / . -. - .-. -.--
+len("4b50313020596f72")
+print()
+print(len("4b50313020596f72"))

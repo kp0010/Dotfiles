@@ -1,0 +1,17 @@
+<keymap version="1" name="KDE copy" parent="Default for KDE">
+  <action id="EditorCreateRectangularSelectionOnMouseDrag">
+    <mouse-shortcut keystroke="shift alt button1" />
+  </action>
+  <action id="EditorPasteFromX11" />
+  <action id="GotoDeclarationOnly">
+    <mouse-shortcut keystroke="button2" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="alt right" />
+    <keyboard-shortcut first-keystroke="alt l" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="alt left" />
+    <keyboard-shortcut first-keystroke="alt h" />
+  </action>
+</keymap>

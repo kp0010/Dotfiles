@@ -1,0 +1,23 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$USER_HOME$/Dev/python/2048" value="true" />
+        <entry key="$USER_HOME$/Dev/python/Cypher" value="true" />
+        <entry key="$USER_HOME$/PycharmProjects/2048" value="true" />
+        <entry key="$USER_HOME$/PycharmProjects/Cypeher" value="true" />
+        <entry key="$USER_HOME$/PycharmProjects/Cypher" value="true" />
+        <entry key="$USER_HOME$/PycharmProjects/DS" value="true" />
+        <entry key="$USER_HOME$/Temp" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/PycharmProjects" />
+        <option value="$USER_HOME$/Dev/python" />
+      </list>
+    </option>
+  </component>
+</application>

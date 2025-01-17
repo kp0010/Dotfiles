@@ -1,0 +1,35 @@
+<application>
+  <component name="DimensionService">
+    <size key="GridCell.Tab.0.left.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1080@120dpi" width="1818" height="283" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1838" height="311" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1838" height="311" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1838" height="311" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1838" height="311" />
+  </component>
+  <component name="WindowManager">
+    <frame x="260" y="40" width="1400" height="1000" extendedState="6" />
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="690" y="222" width="533" height="603" key="FileChooserDialogImpl" timestamp="1723560435404">
+      <screen x="0" y="42" width="1920" height="1038" />
+    </state>
+    <state x="690" y="187" key="FileChooserDialogImpl.ideScale=90" timestamp="1731391063363">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="187" key="FileChooserDialogImpl.ideScale=90/0.0.1920.1080" timestamp="1731391063363" />
+    <state x="690" y="227" key="FileChooserDialogImpl.ideScale=90/0.48.1920.1032" timestamp="1723965868722" />
+    <state x="690" y="222" width="533" height="603" key="FileChooserDialogImpl/0.42.1920.1038" timestamp="1723560435404" />
+    <state x="960" y="540" width="1920" height="1080" key="WELCOME_SCREEN.ideScale=90" timestamp="1731391015107">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="960" y="540" width="1920" height="1080" key="WELCOME_SCREEN.ideScale=90/0.0.1920.1080" timestamp="1731391015107" />
+    <state x="960" y="500" width="800" height="650" key="WELCOME_SCREEN.ideScale=90/0.48.1920.1032" timestamp="1724301473007" />
+  </component>
+</application>

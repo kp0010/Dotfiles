@@ -1,0 +1,226 @@
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.value = val
+        self.left = left
+        self.right = right
+
+
+class BinaryTree:
+    def __init__(self, head_val=None):
+        if head_val is not None:
+            self.root = Node(head_val)
+        else:
+            self.root = None
+
+    def insert_node(self, value):
+        if self.root is None: raise ValueError("Root is not present")
+
+        new_node = Node(value)
+        temp = self.root
+        pre_temp = self.root
+
+        while temp is not None:
+            pretemp = temp
+            if value < temp.value:
+                temp = temp.left
+            else:
+                temp = temp.right
+
+        if value < temp.value:
+            pre_temp.left = new_node
+        else:
+            pre_temp.right = new_node
+
+    def preorder_trav(self):
+        if self.root is None: raise ValueError("Root is not present")
+
+        temp = self.root
+
+        print(temp.value, end=" | ")
+        self.preorder_trav(temp.left)
+        self.preorder_trav(temp.right)
+
+
+if __name__ == "__main__":
+    bin_tree = BinaryTree(5)
+    bin_tree.insert_node(2)
+    bin_tree.insert_node(6)
+    bin_tree.insert_node(3)
+    bin_tree.insert_node(9)
+    bin_tree.insert_node(1)
+
+    bin_tree.preorder_trav()
+
+-. . -..- - / . -. - .-. -.--
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.value = val
+        self.left = left
+        self.right = right
+
+    def __repr__(self):
+        return f"{self.value} {self.left, self.right}"
+
+class BinaryTree:
+    def __init__(self, head_val=None):
+        if head_val is not None:
+            self.root = Node(head_val)
+        else:
+            self.root = None
+
+        print(self.root)
+
+    def insert_node(self, value):
+        if self.root is None: raise ValueError("Root is not present")
+
+        new_node = Node(value)
+        temp = self.root
+        pre_temp = self.root
+
+        while temp is not None:
+            pretemp = temp
+            if value < temp.value:
+                temp = temp.left
+            else:
+                temp = temp.right
+
+        if value < temp.value:
+            pre_temp.left = new_node
+        else:
+            pre_temp.right = new_node
+
+    def preorder_trav(self):
+        if self.root is None: raise ValueError("Root is not present")
+
+        temp = self.root
+
+        print(temp.value, end=" | ")
+        self.preorder_trav(temp.left)
+        self.preorder_trav(temp.right)
+
+
+if __name__ == "__main__":
+    bin_tree = BinaryTree(5)
+    bin_tree.insert_node(2)
+    bin_tree.insert_node(6)
+    bin_tree.insert_node(3)
+    bin_tree.insert_node(9)
+    bin_tree.insert_node(1)
+
+    bin_tree.preorder_trav()
+
+-. . -..- - / . -. - .-. -.--
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.value = val
+        self.left = left
+        self.right = right
+
+    def __repr__(self):
+        return f"{self.value} {self.left, self.right}"
+
+class BinaryTree:
+    def __init__(self, head_val=None):
+        if head_val is not None:
+            self.root = Node(head_val)
+        else:
+            self.root = None
+
+        print(self.root)
+
+    def insert_node(self, value):
+        if self.root is None: raise ValueError("Root is not present")
+
+        new_node = Node(value)
+        temp = self.root
+        pre_temp = self.root
+
+        while temp is not None:
+            pre_temp= temp
+            if value < temp.value:
+                temp = temp.left
+            else:
+                temp = temp.right
+
+        if value < pre_temp.value:
+            pre_temp.left = new_node
+        else:
+            pre_temp.right = new_node
+
+    def preorder_trav(self, head=None):
+        if self.root is None: raise ValueError("Root is not present"); return
+
+        if head is None:head = self.root
+
+        print(head.value, end=" | ")
+        self.preorder_trav(head.left)
+        self.preorder_trav(head.right)
+
+
+if __name__ == "__main__":
+    bin_tree = BinaryTree(5)
+    bin_tree.insert_node(2)
+    bin_tree.insert_node(6)
+    bin_tree.insert_node(3)
+    bin_tree.insert_node(9)
+    bin_tree.insert_node(1)
+
+    bin_tree.preorder_trav()
+
+-. . -..- - / . -. - .-. -.--
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.value = val
+        self.left = left
+        self.right = right
+
+    def __repr__(self):
+        return f"{self.value} {self.left, self.right}"
+
+class BinaryTree:
+    def __init__(self, head_val=None):
+        if head_val is not None:
+            self.root = Node(head_val)
+        else:
+            self.root = None
+
+        print(self.root)
+
+    def insert_node(self, value):
+        if self.root is None: raise ValueError("Root is not present")
+
+        new_node = Node(value)
+        temp = self.root
+        pre_temp = self.root
+
+        while temp is not None:
+            pre_temp= temp
+            if value < temp.value:
+                temp = temp.left
+            else:
+                temp = temp.right
+
+        if value < pre_temp.value:
+            pre_temp.left = new_node
+        else:
+            pre_temp.right = new_node
+
+    def preorder_trav(self, head=None):
+        if self.head is None: raise ValueError("Root is not present"); return
+
+        if head is None:
+
+        print(head.value, end=" | ")
+        self.preorder_trav(head.left)
+        self.preorder_trav(head.right)
+
+
+if __name__ == "__main__":
+    bin_tree = BinaryTree(5)
+    bin_tree.insert_node(2)
+    bin_tree.insert_node(6)
+    bin_tree.insert_node(3)
+    bin_tree.insert_node(9)
+    bin_tree.insert_node(1)
+
+    bin_tree.preorder_trav()

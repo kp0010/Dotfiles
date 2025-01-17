@@ -1,0 +1,226 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="Cypeher" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf ideFingerprint="23lnxjdqua2y" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Cypher/row_col_cypher.py">
+          <provider editor-type-id="text-editor" selected="true">
+            <state relative-caret-position="442">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+        <tab><![CDATA[{"tabTitle":"row_col_cypher.py","foregroundColor":-1249292,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,127,10,48,105,99,111,110,115,47,99,111,109,47,106,101,116,98,114,97,105,110,115,47,112,121,116,104,111,110,47,112,97,114,115,101,114,47,112,121,116,104,111,110,70,105,108,101,46,115,118,103,18,50,105,99,111,110,115,47,99,111,109,47,106,101,116,98,114,97,105,110,115,47,112,121,116,104,111,110,47,112,97,114,115,101,114,47,101,120,112,117,105,47,112,121,116,104,111,110,46,115,118,103,26,10,80,121,116,104,111,110,67,111,114,101,40,-53,-109,-42,-7,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary"><![CDATA[{
+  "data": {
+    "Python": {
+      "usageCount": 2,
+      "lastUsed": 1723664612911
+    },
+    "WebPreview": {
+      "usageCount": 1,
+      "lastUsed": 1723664618553
+    }
+  }
+}]]></component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>print</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/../Cypher/row_col_cypher.py" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="LanguageUsageStatistics">
+    <language id="Python">
+      <summary usageCount="2" lastUsage="1723664612914" />
+    </language>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Cypher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir{file:///home/kp/PycharmProjects/Cypher}" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+          <presentation>
+            <attributes />
+            <data iconPath="expui/toolwindows/project.svg" iconPlugin="com.intellij" isLeaf="false" text="Cypher" />
+            <item name="Cypher" type="b2602c69:ProjectViewProjectNode" />
+            <presentation>
+              <attributes>
+                <map>
+                  <entry key="filePath" value="$PROJECT_DIR$/../Cypher" />
+                </map>
+              </attributes>
+              <data iconPath="expui/nodes/folder.svg" iconPlugin="com.intellij" isLeaf="false" text="Cypher" />
+              <item name="dir{file:///home/kp/PycharmProjects/Cypher}" type="462c0819:PsiDirectoryNode" />
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/../Cypher/.venv" />
+                  </map>
+                </attributes>
+                <data iconPath="expui/nodes/excludeRoot.svg" iconPlugin="com.intellij" isLeaf="false" text=".venv" />
+                <item name="dir{file:///home/kp/PycharmProjects/Cypher/.venv}" type="462c0819:PsiDirectoryNode" />
+              </presentation>
+              <presentation>
+                <attributes>
+                  <map>
+                    <entry key="filePath" value="$PROJECT_DIR$/../Cypher/row_col_cypher.py" />
+                  </map>
+                </attributes>
+                <data iconPath="icons/com/jetbrains/python/parser/expui/python.svg" iconPlugin="PythonCore" isLeaf="true" text="row_col_cypher.py" />
+                <item name="row_col_cypher.py" type="ab9368bb:PsiFileNode" />
+              </presentation>
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/nodes/library.svg" iconPlugin="com.intellij" isLeaf="false" text="External Libraries" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </presentation>
+            <presentation>
+              <attributes />
+              <data iconPath="expui/fileTypes/scratches.svg" iconPlugin="com.intellij" isLeaf="false" text="Scratches and Consoles" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </presentation>
+          </presentation>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4784000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layoutV2>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.14817709" />
+      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Problems" order="1" />
+      <window_info anchor="bottom" id="Problems View" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info anchor="bottom" id="Services" order="4" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
+      <window_info anchor="bottom" id="Python Console" order="6" weight="0.34220716" />
+      <window_info anchor="bottom" id="Debug" order="6" show_stripe_button="false" weight="0.34220716" />
+      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
+      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
+      <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+      <window_info anchor="right" id="Run" order="6" show_stripe_button="false" side_tool="true" weight="0.38880208" />
+      <unified_weights bottom="0.34220716" left="0.14817709" right="0.38880208" />
+    </layoutV2>
+    <recentWindows>
+      <value>Run</value>
+      <value>Debug</value>
+      <value>Python Console</value>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1818" height="409" key="GridCell.Tab.0.bottom" timestamp="1723664999705">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.bottom.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.bottom.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="409" key="GridCell.Tab.0.bottom/0.48.1920.1032@0.48.1920.1032" timestamp="1723664999705" />
+    <state width="1818" height="409" key="GridCell.Tab.0.center" timestamp="1723664999705">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.center.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.center.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="409" key="GridCell.Tab.0.center/0.48.1920.1032@0.48.1920.1032" timestamp="1723664999705" />
+    <state width="1818" height="409" key="GridCell.Tab.0.left" timestamp="1723664999705">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.left.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.left.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="409" key="GridCell.Tab.0.left/0.48.1920.1032@0.48.1920.1032" timestamp="1723664999705" />
+    <state width="1818" height="409" key="GridCell.Tab.0.right" timestamp="1723664999705">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.right.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.0.right.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="409" key="GridCell.Tab.0.right/0.48.1920.1032@0.48.1920.1032" timestamp="1723664999705" />
+    <state width="1818" height="283" key="GridCell.Tab.1.bottom.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.1.bottom.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="283" key="GridCell.Tab.1.center.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.1.center.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="283" key="GridCell.Tab.1.left.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.1.left.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state width="1818" height="283" key="GridCell.Tab.1.right.ideScale=90" timestamp="1723669100870">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="1818" height="283" key="GridCell.Tab.1.right.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723669100870" />
+    <state x="332" y="112" width="1256" height="913" key="SettingsEditor" timestamp="1723665262618">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state x="332" y="112" key="SettingsEditor.ideScale=90" timestamp="1723665291322">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state x="332" y="112" key="SettingsEditor.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723665291322" />
+    <state x="332" y="112" width="1256" height="913" key="SettingsEditor/0.48.1920.1032@0.48.1920.1032" timestamp="1723665262618" />
+    <state width="800" height="358" key="ShowBookmarks.ideScale=90" timestamp="1723666006600">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state width="800" height="358" key="ShowBookmarks.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723666006600" />
+    <state x="540" y="256" key="run.anything.popup.ideScale=90" timestamp="1723668170637">
+      <screen x="0" y="48" width="1920" height="1032" />
+    </state>
+    <state x="540" y="256" key="run.anything.popup.ideScale=90/0.48.1920.1032@0.48.1920.1032" timestamp="1723668170637" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../Cypher/row_col_cypher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
