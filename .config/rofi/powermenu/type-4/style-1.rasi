@@ -16,7 +16,7 @@ configuration {
 * {
     /* Resolution : 1920x1080 */
     mainbox-spacing:             100px;
-    mainbox-margin:              100px 300px;
+    mainbox-margin:              10px 30px;
     message-margin:              0px 400px;
     message-padding:             15px;
     message-border-radius:       100%;
