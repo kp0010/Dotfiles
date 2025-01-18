@@ -82,6 +82,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			else
+				loginctl kill-session $XDG_SESSION_ID
 			fi
 		fi
 	else
@@ -102,10 +104,8 @@ case ${chosen} in
 		run_cmd --hibernate
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
+		if [[ -x '/usr/bin/hyprlock' ]]; then
+			hyprlock
 		fi
         ;;
     $suspend)

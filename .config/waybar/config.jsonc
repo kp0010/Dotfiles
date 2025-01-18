@@ -105,6 +105,9 @@
       "~": "  Terminal",
       "zsh": "  Terminal",
       "kitty": "  Terminal",
+      "(.*)kitty":
+        "<span foreground='#89b4fa'> </span> $1Kitty",
+
       "sejjy@archlinux:(.*)": "  Terminal",
       "(.*)sejjy@archlinux:~": "  Terminal",
 
