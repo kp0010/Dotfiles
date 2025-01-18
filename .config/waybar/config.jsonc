@@ -72,7 +72,7 @@
     "tooltip": false,
     "min-length": 3,
     "max-length": 3,
-    "on-click": "wofi --show drun"
+    "on-click": "~/.config/rofi/launchers/type-7/launcher.sh"
   },
 
   "hyprland/workspaces": {

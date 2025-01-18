@@ -213,6 +213,7 @@ alias cdpy="cd ~/Dev/python/"
 alias cdrs="cd ~/Dev/rust/"
 alias cdjs="cd ~/Dev/js/"
 alias cdgo="cd ~/Dev/go/"
+alias cdcp="cd ~/Dev/cpp/"
 
 function cdls() {
     z $@

@@ -14,6 +14,7 @@ if not vim.uv.fs_stat(lazypath) then
 	end
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
+-------------------------------------------------------------------------------------------------
 
 -- [[ Configure and install plugins ]]
 
@@ -59,6 +60,7 @@ require("lazy").setup({
 			},
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"chrisgrieser/nvim-spider",
 		keys = {
@@ -70,6 +72,7 @@ require("lazy").setup({
 			-- ...
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"rcarriga/nvim-notify",
 		opts = {
@@ -80,6 +83,7 @@ require("lazy").setup({
 			end,
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -100,6 +104,7 @@ require("lazy").setup({
 		},
 		presets = { inc_rename = true },
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"shellRaining/hlchunk.nvim",
 		event = { "BufReadPre", "BufNewFile" },
@@ -111,9 +116,11 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"alexghergh/nvim-tmux-navigation",
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"OXY2DEV/markview.nvim",
 		lazy = false, -- Recommended
@@ -166,6 +173,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	-- {
 	-- 	"iamcco/markdown-preview.nvim",
 	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -184,6 +192,7 @@ require("lazy").setup({
 	-- 	---@type render.md.UserConfig
 	-- 	opts = {},
 	-- },
+	-------------------------------------------------------------------------------------------------
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
@@ -197,6 +206,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"stevearc/oil.nvim",
 		---@module 'oil'
@@ -224,11 +234,13 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		opts = {},
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
@@ -237,12 +249,14 @@ require("lazy").setup({
 			require("harpoon").setup({})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"smjonas/inc-rename.nvim",
 		config = function()
 			require("inc_rename").setup({})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -250,11 +264,13 @@ require("lazy").setup({
 		---@type ibl.config
 		opts = { exclude = { filetypes = { "dashboard" } } },
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"numToStr/Comment.nvim",
 		opts = {},
 		lazy = false,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"nvimdev/dashboard-nvim",
 		event = "VimEnter",
@@ -315,6 +331,7 @@ require("lazy").setup({
 		end,
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -325,6 +342,7 @@ require("lazy").setup({
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -372,6 +390,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
@@ -405,6 +424,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{
 		"ahmedkhalf/project.nvim",
 		event = "VimEnter",
@@ -451,6 +471,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	-- NOTE: Plugins can specify dependencies.
 	--
 	-- The dependencies are proper plugin specifications as well - anything
@@ -563,6 +584,7 @@ require("lazy").setup({
 			end, { desc = "[S]earch [N]eovim files" })
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 
 	-- LSP Plugins
 	{
@@ -577,7 +599,9 @@ require("lazy").setup({
 			},
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 	{ "Bilal2453/luvit-meta", lazy = true },
+	-------------------------------------------------------------------------------------------------
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
@@ -798,6 +822,7 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 
 	{ -- Autoformat
 		"stevearc/conform.nvim",
@@ -835,6 +860,7 @@ require("lazy").setup({
 			},
 		},
 	},
+	-------------------------------------------------------------------------------------------------
 
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
@@ -951,7 +977,7 @@ require("lazy").setup({
 			})
 		end,
 	},
-
+	-------------------------------------------------------------------------------------------------
 	{ -- You can easily change to a different colorscheme.
 		-- Change the name of the colorscheme plugin below, and then
 		-- change the command in the config to whatever the name of that colorscheme is.
@@ -969,7 +995,7 @@ require("lazy").setup({
 			vim.cmd.hi("Comment gui=none")
 		end,
 	},
-
+	-------------------------------------------------------------------------------------------------
 	-- Highlight todo, notes, etc in comments
 	{
 		"folke/todo-comments.nvim",
@@ -977,7 +1003,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
-
+	-------------------------------------------------------------------------------------------------
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()
@@ -1019,6 +1045,7 @@ require("lazy").setup({
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
 	},
+	-------------------------------------------------------------------------------------------------
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -1067,29 +1094,9 @@ require("lazy").setup({
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
-
-	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
-	-- init.lua. If you want these files, they are in the repository, so you can just download them and
-	-- place them in the correct locations.
-
-	-- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-	--
-	--  Here are some example plugins that I've included in the Kickstart repository.
-	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
-	--
-	-- require 'kickstart.plugins.debug',
-	-- require 'kickstart.plugins.indent_line',
-	-- require 'kickstart.plugins.lint',
-	-- require 'kickstart.plugins.autopairs',
-	-- require 'kickstart.plugins.neo-tree',
-	-- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
-
-	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-	--    This is the easiest way to modularize your config.
-	--
-	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-	-- { import = 'custom.plugins' },
+	-------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
