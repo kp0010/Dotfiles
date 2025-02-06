@@ -61,13 +61,13 @@ while true; do
   # Actions based on selected option
   case "$selected_option" in
   "Enable Bluetooth")
-    notify-send "Bluetooth Enabled"
+    # notify-send "Bluetooth Enabled"
     rfkill unblock bluetooth
     bluetoothctl power on
     sleep 1
     ;;
   "Disable Bluetooth")
-    notify-send "Bluetooth Disabled"
+    # notify-send "Bluetooth Disabled"
     rfkill block bluetooth
     bluetoothctl power off
     sleep 1

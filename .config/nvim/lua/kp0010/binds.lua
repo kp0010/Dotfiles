@@ -72,6 +72,10 @@ vim.keymap.set("n", "<leader>rn", function()
 end, { expr = true })
 -----------------------------------------------------------------------
 
+-- Comment
+vim.keymap.set("n", "<C-_>", function()
+	require("Comment.api").toggle.linewise.current()
+end, { noremap = true, silent = true })
 vim.keymap.set("n", "<C-/>", function()
 	require("Comment.api").toggle.linewise.current()
 end, { noremap = true, silent = true })
@@ -116,7 +120,7 @@ vim.keymap.set("n", "<A-2>", ":Neotree position=right reveal<Return>")
 -----------------------------------------------------------------------
 
 -- C-/ to Comment
-vim.keymap.set({ "v", "n" }, "<C-/>", "gcc")
+-- vim.keymap.set({ "v", "n" }, "<C-/>", "gcc")
 -----------------------------------------------------------------------
 
 -- Leader - to Oil File Manager

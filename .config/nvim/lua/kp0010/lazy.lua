@@ -1094,6 +1094,18 @@ require("lazy").setup({
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
+	{
+		"kawre/leetcode.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			-- "ibhagwan/fzf-lua",
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {
+			-- configuration goes here
+		},
+	},
 	-------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------

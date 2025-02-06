@@ -11,6 +11,10 @@ vim.opt.shell = "/bin/zsh"
 vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h11" }
 -----------------------------------------------------------------------
 
+-- Tab width
+vim.opt.shiftwidth = 4
+-----------------------------------------------------------------------
+
 -- Make line numbers default
 vim.opt.number = true
 -----------------------------------------------------------------------

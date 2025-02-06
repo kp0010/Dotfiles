@@ -188,11 +188,8 @@ alias gr="git restore"
 alias gl="git log"
 alias gst="git stash"
 
-alias urbankicks="cd ~/Desktop/Projects/UrbanKicks/"
-alias projuk="tmuxifier s UrbanKicks"
-alias puk="tmuxifier s UrbanKicks"
-alias servuk="tmuxifier s UrbanKicksServer"
-alias suk="tmuxifier s UrbanKicksServer"
+alias asdc="tmuxifier s asdc"
+alias asds="tmuxifier s asds"
 
 alias pacs="sudo pacman -S"
 alias pacq="pacman -Q"
@@ -230,6 +227,7 @@ alias dol="dolphin "
 
 # Run Fastfetch
 if [[ -o interactive ]]; then
-    fastfetch -l small
+    # fastfetch -l small
+    fastfetch --logo-width 49 --logo-height 23 --kitty ~/.config/fastfetch/pngs/MinimalistWaves_Sq_NoBG.png
     echo "\n"
 fi
