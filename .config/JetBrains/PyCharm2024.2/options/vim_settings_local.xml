@@ -126,24 +126,35 @@
       <jump line="137" column="0" filename="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" protocol="file" />
       <jump line="136" column="38" filename="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Dev/python/ShoesSraper/puma_menssneakershoes.json" protocol="file" />
-      <jump line="105" column="21" filename="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" protocol="file" />
       <jump line="0" column="0" filename="$USER_HOME$/Dev/python/ShoesSraper/puma_mensrunningshoes.json" protocol="file" />
+      <jump line="105" column="21" filename="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" protocol="file" />
+    </project>
+    <project id="Home-loan-eligibility-pred-ML-a5e5898c">
+      <jump line="0" column="0" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/README.md" protocol="file" />
+      <jump line="1" column="0" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="7" column="78" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="8" column="47" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="5" column="22" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="6" column="46" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="10" column="12" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="205" column="1" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
+      <jump line="238" column="0" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
     </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <localmarks>
+      <file name="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/README.md" timestamp="1741712965809">
+        <mark key="&quot;" line="0" column="34" />
+      </file>
       <file name="$USER_HOME$/Dev/python/ShoesSraper/puma_menssneakershoes.json" timestamp="1731391356531">
         <mark key="&quot;" line="0" column="0" />
       </file>
-      <file name="$APPLICATION_CONFIG_DIR$/idea.properties" timestamp="1731389718847">
-        <mark key="&quot;" line="1" column="0" />
-        <mark key="[" line="1" column="0" />
-        <mark key="]" line="1" column="0" />
-        <mark key="." line="1" column="0" />
-      </file>
       <file name="/a.py" timestamp="1731390266557">
         <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" timestamp="1741714124269">
+        <mark key="&quot;" line="173" column="5" />
       </file>
       <file name="$USER_HOME$/Dev/python/ShoesSraper/nike_womensrunningshoes.json" timestamp="1731391252335">
         <mark key="&quot;" line="0" column="0" />
@@ -184,8 +195,14 @@
         <mark key="^" line="31" column="29" />
         <mark key="." line="31" column="28" />
       </file>
-      <file name="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" timestamp="1731391324483">
-        <mark key="&quot;" line="10" column="68" />
+      <file name="$APPLICATION_CONFIG_DIR$/idea.properties" timestamp="1731389718847">
+        <mark key="&quot;" line="1" column="0" />
+        <mark key="[" line="1" column="0" />
+        <mark key="]" line="1" column="0" />
+        <mark key="." line="1" column="0" />
+      </file>
+      <file name="$USER_HOME$/Dev/python/ShoesSraper/scraper.py" timestamp="1741712836911">
+        <mark key="&quot;" line="105" column="21" />
         <mark key="[" line="106" column="22" />
         <mark key="]" line="106" column="22" />
         <mark key="." line="106" column="21" />

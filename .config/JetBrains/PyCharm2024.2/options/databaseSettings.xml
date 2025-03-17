@@ -1,5 +1,6 @@
 <application>
   <component name="DatabaseSettings" version="10">
+    <option name="enable-local-filter-by-default" value="false" />
     <text-mode>
       <parameter-patterns>
         <parameter-pattern value="#(\w+)#" in-scripts="true" scope="XML" predefined="#name#" />

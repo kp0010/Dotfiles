@@ -10,7 +10,7 @@
       <i c="145" l="1731387505390" />
     </e>
     <e n="ActivateProjectToolWindow">
-      <i c="7" l="1731389818806" />
+      <i c="13" l="1741713046567" />
     </e>
     <e n="AutoIndentLines">
       <i c="20" l="1731390706945" />
@@ -24,8 +24,11 @@
     <e n="CloseProject">
       <i c="1" l="1731391014224" />
     </e>
+    <e n="CollapseRegion">
+      <i c="1" l="1741712951646" />
+    </e>
     <e n="CollapseSelection">
-      <i c="20" l="1731387484024" />
+      <i c="40" l="1741712959258" />
     </e>
     <e n="CommentByLineComment">
       <i c="37" l="1731391316339" />
@@ -37,7 +40,7 @@
       <i c="2" l="1731389126755" />
     </e>
     <e n="EditorBackSpace">
-      <i c="1327" l="1731391323984" />
+      <i c="1333" l="1741714046983" />
     </e>
     <e n="EditorChooseLookupItem">
       <i c="146" l="1731390339977" />
@@ -52,7 +55,7 @@
       <i c="4" l="1724165462590" />
     </e>
     <e n="EditorDecreaseFontSizeGlobal">
-      <i c="10" l="1731389072929" />
+      <i c="12" l="1741712975837" />
     </e>
     <e n="EditorDelete">
       <i c="78" l="1724166139013" />
@@ -82,7 +85,7 @@
       <i c="63" l="1731391122526" />
     </e>
     <e n="EditorIncreaseFontSizeGlobal">
-      <i c="12" l="1731389071348" />
+      <i c="16" l="1741712974675" />
     </e>
     <e n="EditorIndentSelection">
       <i c="8" l="1724161968682" />
@@ -151,7 +154,10 @@
       <i c="3" l="1724846758605" />
     </e>
     <e n="ExpandRegion">
-      <i c="8" l="1731389745204" />
+      <i c="10" l="1741712952439" />
+    </e>
+    <e n="ExpandRegionRecursively">
+      <i c="2" l="1741712969711" />
     </e>
     <e n="FileChooser.NewFolder">
       <i c="1" l="1731389205955" />
@@ -165,8 +171,11 @@
     <e n="Find">
       <i c="7" l="1724162317184" />
     </e>
+    <e n="FindInPath">
+      <i c="2" l="1741714041573" />
+    </e>
     <e n="GotoCustomRegion">
-      <i c="7" l="1731389069787" />
+      <i c="11" l="1741712971634" />
     </e>
     <e n="GotoDeclaration">
       <i c="3" l="1724165463817" />
@@ -228,8 +237,11 @@
     <e n="NextTemplateVariable">
       <i c="5" l="1724165948373" />
     </e>
+    <e n="NotebookRunAllAction">
+      <i c="1" l="1741713824156" />
+    </e>
     <e n="OpenFile">
-      <i c="3" l="1731389389755" />
+      <i c="4" l="1741712819445" />
     </e>
     <e n="PasteMultiple">
       <i c="3" l="1731390164567" />
@@ -262,7 +274,7 @@
       <i c="1" l="1723668169513" />
     </e>
     <e n="SearchEverywhere">
-      <i c="2" l="1731388624093" />
+      <i c="3" l="1741712963780" />
     </e>
     <e n="SelectNextOccurrence">
       <i c="2" l="1731388763990" />
@@ -336,6 +348,9 @@
     <e n="com.intellij.find.editorHeaderActions.NextOccurrenceAction">
       <i c="7" l="1724162333976" />
     </e>
+    <e n="com.intellij.find.impl.FindPopupPanel$MyEnterAction">
+      <i c="1" l="1741714057483" />
+    </e>
     <e n="com.intellij.ide.ReopenProjectAction">
       <i c="3" l="1731389385805" />
     </e>
@@ -349,13 +364,13 @@
       <i c="2" l="1726211055913" />
     </e>
     <e n="com.intellij.openapi.actionSystem.AnActionWrapper">
-      <i c="341" l="1731391323982" />
+      <i c="348" l="1741714040880" />
     </e>
     <e n="com.intellij.openapi.actionSystem.EmptyAction">
       <i c="34" l="1731388693028" />
     </e>
     <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
-      <i c="8" l="1731391359184" />
+      <i c="9" l="1741712918708" />
     </e>
     <e n="com.intellij.openapi.keymap.impl.ui.KeymapPanel$AddKeyboardShortcutAction">
       <i c="6" l="1731388740433" />
@@ -367,7 +382,7 @@
       <i c="1" l="1724155784651" />
     </e>
     <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
-      <i c="3" l="1731388630465" />
+      <i c="5" l="1741714039475" />
     </e>
     <e n="com.intellij.openapi.ui.DialogWrapper$5">
       <i c="26" l="1731391034012" />
@@ -379,7 +394,7 @@
       <i c="1" l="1723965933119" />
     </e>
     <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
-      <i c="18" l="1731389711383" />
+      <i c="21" l="1741714023295" />
     </e>
     <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$5">
       <i c="1" l="1731391044247" />
@@ -391,7 +406,7 @@
       <i c="1" l="1731389714595" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
-      <i c="6" l="1726211166373" />
+      <i c="7" l="1741713914768" />
     </e>
     <e n="com.intellij.toolWindow.ToolWindowHeader$ShowOptionsAction">
       <i c="3" l="1731390215186" />
@@ -401,6 +416,12 @@
     </e>
     <e n="com.intellij.ui.ScrollingUtil$ListMoveUpAction">
       <i c="1" l="1731390166819" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveDownAction">
+      <i c="2" l="1741714052852" />
+    </e>
+    <e n="com.intellij.ui.ScrollingUtil$TableMoveUpAction">
+      <i c="3" l="1741714054482" />
     </e>
     <e n="com.intellij.ui.SpeedSearchBase$6">
       <i c="1" l="1731389179588" />
@@ -415,7 +436,7 @@
       <i c="1" l="1731390219839" />
     </e>
     <e n="com.jetbrains.python.sdk.AddLocalInterpreterAction">
-      <i c="1" l="1726211063221" />
+      <i c="2" l="1741712856621" />
     </e>
     <e n="com.jetbrains.python.sdk.PySdkPopupFactory$SwitchToSdkAction">
       <i c="4" l="1731389726911" />

@@ -47,23 +47,39 @@
         </entry>
         <entry key="$USER_HOME$/Dev/python/ShoesSraper">
           <value>
-            <RecentProjectMetaInfo frameTitle="ShoesSraper – scraper.py" opened="true" projectWorkspaceId="2ojlrNS7gi7e8siaoNv2MOmqPZw">
-              <option name="activationTimestamp" value="1731391367514" />
+            <RecentProjectMetaInfo frameTitle="ShoesSraper – What's New in Material Theme UI?" projectWorkspaceId="2ojlrNS7gi7e8siaoNv2MOmqPZw">
+              <option name="activationTimestamp" value="1741712836634" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PY-242.23726.102" />
               <option name="buildTimestamp" value="1729624860000" />
               <option name="colorInfo">
                 <RecentProjectColorInfo associatedIndex="1" />
               </option>
-              <frame x="260" y="40" width="1400" height="1000" extendedState="6" />
+              <frame x="3" y="32" width="1912" height="1044" />
               <option name="productionCode" value="PY" />
               <option name="projectOpenTimestamp" value="1731391063783" />
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Home-loan-eligibility-pred-ML" opened="true" projectWorkspaceId="2uBCyrGIitIyTDOTzoOqQjXp0BW">
+              <option name="activationTimestamp" value="1741716358901" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-243.21565.199" />
+              <option name="buildTimestamp" value="1731482940000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="2" />
+              </option>
+              <frame x="3" y="32" width="1912" height="1044" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1741712837246" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/Dev/python/ShoesSraper" />
+    <option name="lastOpenedProject" value="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML" />
     <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects" />
   </component>
 </application>

@@ -19,14 +19,14 @@
     <feature id="editing.reformat.code" count="2" last-shown="0" last-used="1724156641834" shown-count="0" />
     <feature id="editing.completion.show.liveTemplates" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.copy.line" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="navigation.find.in.files" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="navigation.find.in.files" count="2" last-shown="0" last-used="1741714041612" shown-count="0" />
     <feature id="db.copy.table" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="ui.hide.tool.window" count="21" last-shown="0" last-used="1731391147043" shown-count="0" />
+    <feature id="ui.hide.tool.window" count="22" last-shown="0" last-used="1741713914775" shown-count="0" />
     <feature id="navigation.find.replace.in.files.toggle" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="intentions.check.regexp" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="profiler.open.snapshot" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.comment.line" count="37" last-shown="0" last-used="1731391316353" shown-count="0" />
-    <feature id="SearchEverywhere" count="2" last-shown="0" last-used="1731388624311" shown-count="0" />
+    <feature id="SearchEverywhere" count="3" last-shown="0" last-used="1741712963991" shown-count="0" />
     <feature id="editor.delete.line" count="105" last-shown="0" last-used="1724165938099" shown-count="0" />
     <feature id="navigation.inheritance.hierarchy" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.duplicate" count="9" last-shown="0" last-used="1724161483191" shown-count="0" />
@@ -74,7 +74,7 @@
     <feature id="navigation.goto.declaration" count="3" last-shown="0" last-used="1724165463830" shown-count="0" />
     <feature id="jupyter.add.cell" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.completion.finishByDotEtc" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="ui.open.project.tool.window" count="7" last-shown="0" last-used="1731389818809" shown-count="0" />
+    <feature id="ui.open.project.tool.window" count="13" last-shown="0" last-used="1741713046600" shown-count="0" />
     <feature id="editing.join.lines" count="1" last-shown="0" last-used="1731390687821" shown-count="0" />
     <feature id="debugger.breakpoint.non.suspending" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="editing.completion.finishByCtrlDot" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -98,7 +98,7 @@
     <feature id="codeassists.quickjavadoc.lookup" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="ui.scheme.quickswitch" count="1" last-shown="0" last-used="1723664941202" shown-count="0" />
     <feature id="navigation.replace.in.files" count="0" last-shown="0" last-used="0" shown-count="0" />
-    <feature id="jupyter.run.cell" count="0" last-shown="0" last-used="0" shown-count="0" />
+    <feature id="jupyter.run.cell" count="1" last-shown="0" last-used="1741713824170" shown-count="0" />
     <feature id="navigation.popup.file.structure" count="2" last-shown="0" last-used="1731388611783" shown-count="0" />
     <feature id="codeassists.quickjavadoc.ctrln" count="0" last-shown="0" last-used="0" shown-count="0" />
     <feature id="codeassists.quickjavadoc" count="0" last-shown="0" last-used="0" shown-count="0" />
@@ -114,10 +114,10 @@
       <option name="lastDate" value="1731349800000" />
     </completionStatsTag>
     <fixesStatsTag>
-      <option name="invocations" value="10" />
+      <option name="invocations" value="15" />
       <option name="startDate" value="1723660200000" />
-      <option name="dayCount" value="4" />
-      <option name="lastDate" value="1731349800000" />
+      <option name="dayCount" value="5" />
+      <option name="lastDate" value="1741631400000" />
     </fixesStatsTag>
   </component>
 </application>

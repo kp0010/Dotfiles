@@ -36,8 +36,8 @@ vim.keymap.set({ "v", "n" }, "<leader>D", '"+D')
 -----------------------------------------------------------------------
 
 -- Noice dismiss and disable
-vim.keymap.set({ "v", "n" }, "<leader>rm", ":NoiceDismiss<Return>")
-vim.keymap.set({ "v", "n" }, "<leader>rd", ":NoiceDisable<Return>")
+vim.keymap.set({ "v", "n" }, "<leader>jj", ":NoiceDismiss<Return>")
+vim.keymap.set({ "v", "n" }, "<leader>jd", ":NoiceDisable<Return>")
 -----------------------------------------------------------------------
 
 -- Dashboard
@@ -126,3 +126,42 @@ vim.keymap.set("n", "<A-2>", ":Neotree position=right reveal<Return>")
 -- Leader - to Oil File Manager
 vim.keymap.set("n", "<leader>-", ":Oil<Return>")
 -----------------------------------------------------------------------
+
+-- TD to TODOs
+vim.keymap.set({ "n", "v" }, "<leader>td", ":TodoTelescope<Return>")
+-----------------------------------------------------------------------
+
+-- Harpoon Binds
+local harpoon = require("harpoon")
+
+-- REQUIRED
+-- harpoon:setup()
+-- REQUIRED
+
+vim.keymap.set({ "n", "v", "i" }, "<leader>a", function()
+	harpoon:list():add()
+end)
+vim.keymap.set({ "n", "v", "i" }, "<A-e>", function()
+	harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
+
+vim.keymap.set({ "n", "v", "i" }, "<A-f>", function()
+	harpoon:list():select(1)
+end)
+vim.keymap.set({ "n", "v", "i" }, "<A-d>", function()
+	harpoon:list():select(2)
+end)
+vim.keymap.set({ "n", "v", "i" }, "<A-s>", function()
+	harpoon:list():select(3)
+end)
+vim.keymap.set({ "n", "v", "i" }, "<A-a>", function()
+	harpoon:list():select(4)
+end)
+
+-- Toggle previous & next buffers stored within Harpoon list
+vim.keymap.set({ "n", "v", "i" }, "<A-i>", function()
+	harpoon:list():prev()
+end)
+vim.keymap.set({ "n", "v", "i" }, "<A-o>", function()
+	harpoon:list():next()
+end)

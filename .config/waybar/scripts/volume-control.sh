@@ -24,9 +24,9 @@ send_notification() {
 notify_mute() {
   mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
   if [ "${mute}" = "yes" ]; then
-    notify-send -r 91190 "Muted"
+    notify-send -r 91190
   else
-    notify-send -r 91190 "Unmuted"
+    notify-send -r 91190
   fi
 }
 

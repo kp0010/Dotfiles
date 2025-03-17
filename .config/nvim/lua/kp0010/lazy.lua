@@ -35,6 +35,7 @@ require("lazy").setup({
 	"nvim-treesitter/nvim-treesitter",
 	"ahmedkhalf/project.nvim",
 	"mbbill/undotree",
+	"tpope/vim-fugitive",
 
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -89,12 +90,28 @@ require("lazy").setup({
 		event = "VeryLazy",
 		config = function()
 			require("noice").setup({
-				routes = {
-					{
-						view = "notify",
-						filter = { event = "msg_showmode" },
+				require("noice").setup({
+					messages = {
+						view = "mini",
+						view_error = "notify",
 					},
-				},
+					lsp = {
+						-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+						override = {
+							["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+							["vim.lsp.util.stylize_markdown"] = true,
+							["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+						},
+					},
+					-- you can enable a preset for easier configuration
+					presets = {
+						bottom_search = true, -- use a classic bottom cmdline for search
+						command_palette = false, -- position the cmdline and popupmenu together
+						long_message_to_split = true, -- long messages will be sent to a split
+						inc_rename = false, -- enables an input dialog for inc-rename.nvim
+						lsp_doc_border = false, -- add a border to hover docs and signature help
+					},
+				}),
 			})
 		end,
 		opts = {},
@@ -141,16 +158,16 @@ require("lazy").setup({
 
 					--- Bracket conceal configuration.
 					--- Shows () in specific cases
-					brackets = {
+					paranthesis = {
 						enable = true,
 
 						--- Highlight group for the ()
 						---@type string
-						hl = "@punctuation.brackets",
+						hl = "@punctuation.paranthesis",
 					},
 
 					--- LaTeX blocks renderer
-					block = {
+					blocks = {
 						enable = true,
 
 						--- Highlight group for the block
@@ -166,7 +183,7 @@ require("lazy").setup({
 					},
 
 					--- Configuration for inline LaTeX maths
-					inline = {
+					inlines = {
 						enable = true,
 					},
 				},
@@ -246,7 +263,15 @@ require("lazy").setup({
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("harpoon").setup({})
+			require("harpoon").setup({
+				settings = {
+					save_on_toggle = true,
+					sync_on_ui_close = true,
+					key = function()
+						return vim.loop.cwd()
+					end,
+				},
+			})
 		end,
 	},
 	-------------------------------------------------------------------------------------------------
@@ -551,13 +576,15 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
+			vim.keymap.set("n", "<leader>sb", builtin.builtin, { desc = "[S]earch [B]uiltins" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+			vim.keymap.set("n", "<leader>st", builtin.treesitter, { desc = "[S]earch [T]reesitter" })
+			vim.keymap.set("n", "<leader>sls", builtin.lsp_document_symbols, { desc = "[S]earch [D]ocument [S]ymbols" })
 			vim.keymap.set("n", "<leader>sp", ":Telescope projects<Return>", { desc = "[S]earch [P]rojects" })
 
 			-- Slightly advanced example of overriding default behavior and theme
@@ -882,12 +909,12 @@ require("lazy").setup({
 					-- `friendly-snippets` contains a variety of premade snippets.
 					--    See the README about individual language/framework/plugin snippets:
 					--    https://github.com/rafamadriz/friendly-snippets
-					-- {
-					--   'rafamadriz/friendly-snippets',
-					--   config = function()
-					--     require('luasnip.loaders.from_vscode').lazy_load()
-					--   end,
-					-- },
+					{
+						"rafamadriz/friendly-snippets",
+						config = function()
+							require("luasnip.loaders.from_vscode").lazy_load()
+						end,
+					},
 				},
 			},
 			"saadparwaiz1/cmp_luasnip",
@@ -1105,6 +1132,20 @@ require("lazy").setup({
 		opts = {
 			-- configuration goes here
 		},
+	},
+	-------------------------------------------------------------------------------------------------
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim", -- required
+			"sindrets/diffview.nvim", -- optional - Diff integration
+
+			-- Only one of these is needed.
+			"nvim-telescope/telescope.nvim", -- optional
+			"ibhagwan/fzf-lua", -- optional
+			"echasnovski/mini.pick", -- optional
+		},
+		config = true,
 	},
 	-------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH_THEME="awesomepanda"
 ZSH_THEME="robbyrussell" # set by `omz`
+# ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="avit" # set by `omz`
 
 plugins=(git)
@@ -185,8 +185,12 @@ alias gd="git diff"
 alias gpu="git pull"
 alias gf="git fetch"
 alias gr="git restore"
+
 alias gl="git log"
-alias gst="git stash"
+alias gln="git --no-pager log"
+alias glob="git --no-pager log --oneline --graph -n 15"
+
+alias gst="git --no-pager stash"
 
 alias asdc="tmuxifier s asdc"
 alias asds="tmuxifier s asds"
@@ -218,7 +222,7 @@ function cdls() {
 }
 
 function wpsend() {
-    ffmpeg -i $@ -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p sendable_video.mp4
+    ffmpeg -i $@ -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p "WP_${@}"
 }
 
 alias cd="cdls"

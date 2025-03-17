@@ -1,6 +1,6 @@
 <application>
   <component name="PySdkSettings">
     <option name="PREFERRED_VIRTUALENV_BASE_PATH" value="$PROJECT_DIR$/.nvenv" />
-    <option name="PREFERRED_VIRTUALENV_BASE_SDK" value="/usr/bin/python3.12" />
+    <option name="PREFERRED_VIRTUALENV_BASE_SDK" value="/usr/bin/python3.13" />
   </component>
 </application>

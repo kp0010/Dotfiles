@@ -7,8 +7,8 @@
     </option>
   </component>
   <component name="FileEditorManager">
-    <leaf ideFingerprint="275uvloa00834">
-      <file current-in-tab="true">
+    <leaf ideFingerprint="36oechrf3cs1r" SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file>
         <entry file="file://$PROJECT_DIR$/scraper.py">
           <provider editor-type-id="text-editor" selected="true">
             <state relative-caret-position="368">
@@ -17,6 +17,18 @@
           </provider>
         </entry>
         <tab><![CDATA[{"tabTitle":"scraper.py","foregroundColor":-1249292,"textAttributes":{"name":"a"},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,127,10,48,105,99,111,110,115,47,99,111,109,47,106,101,116,98,114,97,105,110,115,47,112,121,116,104,111,110,47,112,97,114,115,101,114,47,112,121,116,104,111,110,70,105,108,101,46,115,118,103,18,50,105,99,111,110,115,47,99,111,109,47,106,101,116,98,114,97,105,110,115,47,112,121,116,104,111,110,47,112,97,114,115,101,114,47,101,120,112,117,105,47,112,121,116,104,111,110,46,115,118,103,26,10,80,121,116,104,111,110,67,111,114,101,40,-53,-109,-42,-7,-8,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
+      <file>
+        <entry file="mock:///What's New in PyCharm">
+          <provider editor-type-id="html-editor" selected="true" />
+        </entry>
+        <tab><![CDATA[{"tabTitle":"What's New in PyCharm","foregroundColor":-11243910,"textAttributes":{"name":"a","children":[{"name":"option","attributes":{"name":"FOREGROUND","value":"546e7a"}}]},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,67,10,15,110,111,100,101,115,47,112,112,87,101,98,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,112,112,87,101,98,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-101,-13,-59,-7,-1,-1,-1,-1,1,48,0]}]]></tab>
+      </file>
+      <file current-in-tab="true">
+        <entry file="mock:///What's New in Material Theme UI?">
+          <provider editor-type-id="html-editor" selected="true" />
+        </entry>
+        <tab><![CDATA[{"tabTitle":"What's New in Material Theme UI?","foregroundColor":-11243910,"textAttributes":{"name":"a","children":[{"name":"option","attributes":{"name":"FOREGROUND","value":"546e7a"}}]},"icon":[10,57,99,111,109,46,105,110,116,101,108,108,105,106,46,117,105,46,105,99,111,110,115,46,82,97,115,116,101,114,105,122,101,100,73,109,97,103,101,68,97,116,97,76,111,97,100,101,114,68,101,115,99,114,105,112,116,111,114,18,67,10,15,110,111,100,101,115,47,112,112,87,101,98,46,115,118,103,18,21,101,120,112,117,105,47,110,111,100,101,115,47,112,112,87,101,98,46,115,118,103,26,12,99,111,109,46,105,110,116,101,108,108,105,106,40,-11,-101,-13,-59,-7,-1,-1,-1,-1,1,48,0]}]]></tab>
       </file>
     </leaf>
   </component>
@@ -27,17 +39,16 @@
       "lastUsed": 1731391357857
     },
     "Python": {
-      "usageCount": 3,
-      "lastUsed": 1731391255119
+      "usageCount": 4,
+      "lastUsed": 1741712790464
+    },
+    "WebPreview": {
+      "usageCount": 2,
+      "lastUsed": 1741712799326
     }
   }
 }]]></component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/insertProductsPG.py" />
-      <option value="$PROJECT_DIR$/scraper.py" />
-    </changedPaths>
-  </component>
+  <component name="IdeDocumentHistory"><![CDATA[{}]]></component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -50,7 +61,7 @@
       <summary usageCount="7" lastUsage="1731391357857" />
     </language>
     <language id="Python">
-      <summary usageCount="3" lastUsage="1731391255119" />
+      <summary usageCount="4" lastUsage="1741712790466" />
     </language>
   </component>
   <component name="ProjectView">
@@ -230,11 +241,11 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303000" />
+    <option name="totallyTimeSpent" value="351000" />
   </component>
   <component name="ToolWindowManager">
     <layoutV2>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18255208" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1331067" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -244,14 +255,14 @@
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
-      <window_info anchor="bottom" id="Run" order="6" show_stripe_button="false" weight="0.3300926" />
+      <window_info anchor="bottom" id="Run" order="7" show_stripe_button="false" weight="0.3300926" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Plots" order="5" weight="0.1" />
-      <unified_weights bottom="0.3300926" left="0.18255208" />
+      <unified_weights bottom="0.3300926" left="0.1331067" />
     </layoutV2>
     <recentWindows>
       <value>Project</value>
@@ -259,22 +270,10 @@
     </recentWindows>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1838" height="311" key="GridCell.Tab.0.bottom.ideScale=90" timestamp="1731391367510">
+    <state x="742" y="311" width="424" height="456" key="FileChooserDialogImpl.ideScale=90" timestamp="1741712834170">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1838" height="311" key="GridCell.Tab.0.bottom.ideScale=90/0.0.1920.1080@0.0.1920.1080" timestamp="1731391367510" />
-    <state width="1838" height="311" key="GridCell.Tab.0.center.ideScale=90" timestamp="1731391367510">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1838" height="311" key="GridCell.Tab.0.center.ideScale=90/0.0.1920.1080@0.0.1920.1080" timestamp="1731391367510" />
-    <state width="1838" height="311" key="GridCell.Tab.0.left.ideScale=90" timestamp="1731391367510">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1838" height="311" key="GridCell.Tab.0.left.ideScale=90/0.0.1920.1080@0.0.1920.1080" timestamp="1731391367510" />
-    <state width="1838" height="311" key="GridCell.Tab.0.right.ideScale=90" timestamp="1731391367510">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1838" height="311" key="GridCell.Tab.0.right.ideScale=90/0.0.1920.1080@0.0.1920.1080" timestamp="1731391367510" />
+    <state x="742" y="311" width="424" height="456" key="FileChooserDialogImpl.ideScale=90/0.0.1920.1080@0.0.1920.1080" timestamp="1741712834170" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/nike_womensjordanshoes.json">
