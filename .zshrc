@@ -187,7 +187,6 @@ alias gf="git fetch"
 alias gr="git restore"
 
 alias gl="git log"
-alias gln="git --no-pager log"
 alias glob="git --no-pager log --oneline --graph -n 15"
 
 alias gst="git --no-pager stash"
@@ -200,7 +199,6 @@ alias pacq="pacman -Q"
 alias pacr="sudo pacman -R"
 
 alias edge="microsoft-edge-stable"
-alias initpostgres="systemctl enable --now postgresql; systemctl status postgresql"
 
 alias sopy="source ./.venv/bin/activate"
 
@@ -208,30 +206,24 @@ alias cpc="xclip -sel c < "
 alias gv="gwenview "
 
 alias bye="shutdown now"
-alias nobye="sudo reboot now"
-
-alias cdpy="cd ~/Dev/python/"
-alias cdrs="cd ~/Dev/rust/"
-alias cdjs="cd ~/Dev/js/"
-alias cdgo="cd ~/Dev/go/"
-alias cdcp="cd ~/Dev/cpp/"
+alias brb="sudo reboot now"
 
 function cdls() {
     z $@
     eza --group-directories-first --icons=always
 }
+alias cd="cdls"
 
 function wpsend() {
     ffmpeg -i $@ -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p "WP_${@}"
 }
 
-alias cd="cdls"
 alias cdi="zi"
 alias dol="dolphin "
 
 # Run Fastfetch
-if [[ -o interactive ]]; then
-    # fastfetch -l small
-    fastfetch --logo-width 49 --logo-height 23 --kitty ~/.config/fastfetch/pngs/MinimalistWaves_Sq_NoBG.png
-    echo "\n"
-fi
+# if [[ -o interactive ]]; then
+#     # fastfetch -l small
+#     fastfetch --logo-width 49 --logo-height 23 --kitty ~/.config/fastfetch/pngs/MinimalistWaves_Sq_NoBG.png
+#     echo "\n"
+# fi
