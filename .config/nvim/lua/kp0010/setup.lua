@@ -27,6 +27,17 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 -----------------------------------------------------------------------
 
+-- Copies Indent from current line to the new one
+vim.opt.autoindent = false
+-----------------------------------------------------------------------
+
+-- Case-Insesitive Search unless /C or Uppercase in search
+vim.opt.ignorecase = true
+-----------------------------------------------------------------------
+
+vim.opt.smartcase = true
+-----------------------------------------------------------------------
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = true
 -----------------------------------------------------------------------

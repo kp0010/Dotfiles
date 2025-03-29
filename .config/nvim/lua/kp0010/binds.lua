@@ -131,6 +131,11 @@ vim.keymap.set("n", "<leader>-", ":Oil<Return>")
 vim.keymap.set({ "n", "v" }, "<leader>td", ":TodoTelescope<Return>")
 -----------------------------------------------------------------------
 
+-- Stay in Indent Mode
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+-----------------------------------------------------------------------
+
 -- Harpoon Binds
 local harpoon = require("harpoon")
 
