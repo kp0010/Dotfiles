@@ -140,6 +140,37 @@
       <jump line="205" column="1" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
       <jump line="238" column="0" filename="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML/Home-loan-eligibility-prediction.ipynb" protocol="file" />
     </project>
+    <project id="Test-1c12f862">
+      <jump line="28" column="0" filename="$USER_HOME$/Dev/python/Test/cleanData.ipynb" protocol="file" />
+      <jump line="26" column="40" filename="$USER_HOME$/Dev/python/Test/cleanData.ipynb" protocol="file" />
+      <jump line="20" column="61" filename="$USER_HOME$/Dev/python/Test/cleanData.ipynb" protocol="file" />
+      <jump line="21" column="0" filename="$USER_HOME$/Dev/python/Test/cleanData.ipynb" protocol="file" />
+      <jump line="30" column="19" filename="$USER_HOME$/Dev/python/Test/cleanData.ipynb" protocol="file" />
+      <jump line="0" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="5" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="9" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="7" column="18" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="18" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="19" column="31" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="24" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="21" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="30" column="73" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="27" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="28" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="34" column="29" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="35" column="10" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="29" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="37" column="23" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="38" column="25" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="47" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="44" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="51" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="11" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="22" column="1" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="13" column="18" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="10" column="10" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+      <jump line="45" column="0" filename="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" protocol="file" />
+    </project>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
@@ -159,6 +190,13 @@
       <file name="$USER_HOME$/Dev/python/ShoesSraper/nike_womensrunningshoes.json" timestamp="1731391252335">
         <mark key="&quot;" line="0" column="0" />
       </file>
+      <file name="$USER_HOME$/Dev/python/Test/cleanData.ipynb" timestamp="1743679889918">
+        <mark key="&quot;" line="17" column="73" />
+        <mark key="[" line="20" column="33" />
+        <mark key="]" line="20" column="33" />
+        <mark key="." line="20" column="34" />
+        <mark key="^" line="20" column="37" />
+      </file>
       <file name="$USER_HOME$/Dev/python/Cypher/des_algorithm.py" timestamp="1731391014374">
         <mark key="&quot;" line="241" column="0" />
         <mark key="'" line="232" column="47" />
@@ -166,6 +204,13 @@
         <mark key="]" line="232" column="38" />
         <mark key="." line="232" column="37" />
         <mark key="^" line="232" column="38" />
+      </file>
+      <file name="$USER_HOME$/Dev/python/Test/Ex10_NetflixAnalysis.ipynb" timestamp="1744825382796">
+        <mark key="'" line="35" column="0" />
+        <mark key="[" line="48" column="117" />
+        <mark key="]" line="49" column="9" />
+        <mark key="." line="49" column="8" />
+        <mark key="^" line="49" column="9" />
       </file>
       <file name="$USER_HOME$/PycharmProjects/Cypher/des_algorithm.py" timestamp="1731389278371">
         <mark key="&quot;" line="208" column="0" />
@@ -229,49 +274,49 @@
   <component name="VimRegisterSettings">
     <registers>
       <register name="&quot;" type="LINE_WISE">
-        <text encoding="base64">a28K</text>
+        <text encoding="base64">Cg==</text>
       </register>
-      <register name="+" type="CHARACTER_WISE">
-        <text encoding="base64">S1AxMCBZb3J1IE1haW4=</text>
+      <register name="+" type="LINE_WISE">
+        <text encoding="base64">aW1wb3J0IGNzdgppbXBvcnQgcGFuZGFzIGFzIHBkCgpkZWYgY2xlYW5fY3N2KGlucHV0X2ZpbGUsIG91dHB1dF9maWxlKToKICAgICMgUmVhZCBDU1YgdXNpbmcgUGFuZGFzIHRvIGhhbmRsZSBpbmNvbnNpc3RlbmNpZXMKICAgIGRmID0gcGQucmVhZF9jc3YoaW5wdXRfZmlsZSwgZHR5cGU9c3RyLCBrZWVwX2RlZmF1bHRfbmE9RmFsc2UpCgogICAgIyBGaWxsIG1pc3Npbmcgc2FsYXJ5IHZhbHVlcyB3aXRoICJOL0EiCiAgICBkZlsnc2FsYXJ5X3JhbmdlJ10gPSBkZlsnc2FsYXJ5X3JhbmdlJ10ucmVwbGFjZSgnJywgJ04vQScpCgogICAgIyBGaWxsIG1pc3NpbmcgZW1wbG95bWVudCB0eXBlIHdpdGggIlVua25vd24iCiAgICBkZlsnZW1wbG95bWVudF90eXBlJ10gPSBkZlsnZW1wbG95bWVudF90eXBlJ10ucmVwbGFjZSgnJywgJ1Vua25vd24nKQoKICAgICMgQ29udmVydCBib29sZWFuLWxpa2UgY29sdW1ucyB0byBUUlVFL0ZBTFNFIGZvcm1hdAogICAgYm9vbGVhbl9jb2x1bW5zID0gWyd0ZWxlY29tbXV0aW5nJywgJ2hhc19jb21wYW55X2xvZ28nLCAnaGFzX3F1ZXN0aW9ucycsICdmcmF1ZHVsZW50J10KICAgIGZvciBjb2wgaW4gYm9vbGVhbl9jb2x1bW5zOgogICAgICAgIGRmW2NvbF0gPSBkZltjb2xdLmFwcGx5KGxhbWJkYSB4OiAnVFJVRScgaWYgeCA9PSAnMScgZWxzZSAnRkFMU0UnKQoKICAgICMgRW5zdXJlIHRleHQgZmllbGRzIGNvbnRhaW5pbmcgY29tbWFzIGFyZSBlbmNsb3NlZCBpbiBxdW90ZXMgd2hlbiBzYXZpbmcKICAgIGRmLnRvX2NzdihvdXRwdXRfZmlsZSwgaW5kZXg9RmFsc2UsIHF1b3Rpbmc9Y3N2LlFVT1RFX0FMTCkKCiAgICBwcmludChmIkNsZWFuZWQgQ1NWIHNhdmVkIGFzIHtvdXRwdXRfZmlsZX0iKQoKIyBFeGFtcGxlIHVzYWdlCmlucHV0X2NzdiA9ICJmYWtlX2pvYl9wb3N0aW5ncy5jc3YiICAjIFJlcGxhY2Ugd2l0aCB5b3VyIGFjdHVhbCBmaWxlIG5hbWUKb3V0cHV0X2NzdiA9ICJmYWtlX2pvYl9wb3N0aW5nc19jbGVhbmVkLmNzdiIKY2xlYW5fY3N2KGlucHV0X2Nzdiwgb3V0cHV0X2NzdikK</text>
       </register>
       <register name="-" type="CHARACTER_WISE">
-        <text encoding="base64">LnJqdXN0KDIsICIgIiks</text>
+        <text encoding="base64">Q29zdF9QZXJfTW9udGhfU3RhbmRhcmQi</text>
       </register>
       <register name="." type="CHARACTER_WISE">
-        <text encoding="base64">MTA=</text>
+        <text encoding="base64">ZGYuc2hvdygp</text>
       </register>
       <register name="/" type="CHARACTER_WISE">
         <text encoding="base64">SU5TRVJU</text>
       </register>
       <register name="0" type="LINE_WISE">
-        <text encoding="base64">ICAgIHByaW50KCJSb3VuZDoiLCAiTm8iLAogICAgICAgICAgIlJvdW5kIEtleSIucmp1c3QoMTIsICcgJyksICJSb3VuZCBPdXRwdXQiLnJqdXN0KDE2LCAnICcpLCBzZXA9JyAgJykK</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgIC5yZXBsYWNlKCIoJCkiLCAiIikK</text>
       </register>
       <register name="1" type="LINE_WISE">
-        <text encoding="base64">a28K</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="2" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICAgICAgcHJpbnQoIlJvdW5kOiIsIHN0cihybisxKS5yanVzdCgyLCAnICcpLAogICAgICAgICAgICAgICAgICBya19oZXgucmp1c3QoMTIsICcwJyksIHJuX2hleC5yanVzdCgxNiwgJzAnKSwgc2VwPScgICcpCg==</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="3" type="LINE_WISE">
-        <text encoding="base64">ICAgIHByaW5UKCkK</text>
+        <text encoding="base64">Cg==</text>
       </register>
       <register name="4" type="LINE_WISE">
-        <text encoding="base64">ICAgIHByaW50KGluaXRfcHRleHQpCg==</text>
+        <text encoding="base64">IyBSZXBsYWNlIHNwYWNlcyBhbmQgcGVyaW9kcyB3aXRoIHVuZGVyc2NvcmVzCg==</text>
       </register>
       <register name="5" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICAgICAgICAgIHByaW50KCJZRVMgMDAiKQo=</text>
+        <text encoding="base64">ZGYuZ3JvdXBCeSgiQ291bnRyeSIpLmF2ZygiQ29zdF9QZXJfTW9udGhfLV9TdGFuZGFyZF8oJCkiKS5vcmRlckJ5KCJhdmcoQ29zdF9QZXJfTW9udGhfLV9TdGFuZGFyZF8oJCkpIiwgYXNjZW5kaW5nPUZhbHNlKS5zaG93KCkK</text>
       </register>
       <register name="6" type="LINE_WISE">
-        <text encoding="base64">a2trCg==</text>
+        <text encoding="base64">IyBSZXBsYWNlIHNwYWNlcyBhbmQgcGVyaW9kcyB3aXRoIHVuZGVyc2NvcmVzCm5ld19jb2x1bW5fbmFtZXMgPSBbY29sLnJlcGxhY2UoIiAiLCAiXyIpLnJlcGxhY2UoIi4iLCAiIikgZm9yIGNvbCBpbiBkZi5jb2x1bW5zXQpkZiA9IGRmLnRvREYoKm5ld19jb2x1bW5fbmFtZXMpCg==</text>
       </register>
       <register name="7" type="LINE_WISE">
-        <text encoding="base64">ICAgICAgICAgICAgCg==</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgIC5yZXBsYWNlKCIoIiwgIiIpCiAgICAgICAgICAgICAgICAgICAucmVwbGFjZSgiKSIsICIiKQo=</text>
       </register>
       <register name="8" type="LINE_WISE">
-        <text encoding="base64">IitwIgo=</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICMgLnJlcGxhY2UoIl8iLCAiX18iKQo=</text>
       </register>
       <register name="9" type="LINE_WISE">
-        <text encoding="base64">Cgo=</text>
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgIC5yZXBsYWNlKCJfIiwgIiIpCg==</text>
       </register>
       <register name=":" type="CHARACTER_WISE">
         <text encoding="base64">YWN0aW9uIEZpbGVTdHJ1Y3R1cmVQb3B1cA==</text>

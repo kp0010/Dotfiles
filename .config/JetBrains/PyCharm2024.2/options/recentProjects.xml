@@ -63,8 +63,8 @@
         </entry>
         <entry key="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML">
           <value>
-            <RecentProjectMetaInfo frameTitle="Home-loan-eligibility-pred-ML" opened="true" projectWorkspaceId="2uBCyrGIitIyTDOTzoOqQjXp0BW">
-              <option name="activationTimestamp" value="1742974135996" />
+            <RecentProjectMetaInfo frameTitle="Home-loan-eligibility-pred-ML" projectWorkspaceId="2uBCyrGIitIyTDOTzoOqQjXp0BW">
+              <option name="activationTimestamp" value="1743678119344" />
               <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
               <option name="build" value="PY-243.21565.199" />
               <option name="buildTimestamp" value="1731482940000" />
@@ -77,9 +77,57 @@
             </RecentProjectMetaInfo>
           </value>
         </entry>
+        <entry key="$USER_HOME$/Dev/python/Test">
+          <value>
+            <RecentProjectMetaInfo frameTitle="Test – Ex10_NetflixAnalysis.ipynb" projectWorkspaceId="2vDSOlJGqSPBdIxiUDWrCPpRADR">
+              <option name="activationTimestamp" value="1744827607867" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-243.21565.199" />
+              <option name="buildTimestamp" value="1731482940000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="3" />
+              </option>
+              <frame x="7" y="55" width="1905" height="1017" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1743678121430" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Dev/python/DSUPProject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="DSUPProject" projectWorkspaceId="2vp2NQYFHsHG9rInBEcT0Yr7drC">
+              <option name="activationTimestamp" value="1744827722949" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-243.21565.199" />
+              <option name="buildTimestamp" value="1731482940000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="4" />
+              </option>
+              <frame x="7" y="55" width="1905" height="1017" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1744827656854" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Dev/python/CreditCardRecommendation">
+          <value>
+            <RecentProjectMetaInfo frameTitle="CreditCardRecommendation – CreditCardRecommendation.ipynb" opened="true" projectWorkspaceId="2vp2eRylbGWmoQNK4txmQvl8xvx">
+              <option name="activationTimestamp" value="1744873498712" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-243.21565.199" />
+              <option name="buildTimestamp" value="1731482940000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="7" y="55" width="1905" height="1017" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1744869391637" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
       </map>
     </option>
-    <option name="lastOpenedProject" value="$USER_HOME$/Dev/python/Home-loan-eligibility-pred-ML" />
+    <option name="lastOpenedProject" value="$USER_HOME$/Dev/python/CreditCardRecommendation" />
     <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects" />
   </component>
 </application>

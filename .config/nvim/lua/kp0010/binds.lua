@@ -90,10 +90,10 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -----------------------------------------------------------------------
 
 -- Disable arrow keys in normal mode
-vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
+-- vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+-- vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+-- vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 -----------------------------------------------------------------------
 
 -- CTRL+<hjkl> to switch between windows
@@ -143,7 +143,7 @@ local harpoon = require("harpoon")
 -- harpoon:setup()
 -- REQUIRED
 
-vim.keymap.set({ "n", "v", "i" }, "<leader>a", function()
+vim.keymap.set({ "n", "v" }, "<leader>a", function()
 	harpoon:list():add()
 end)
 vim.keymap.set({ "n", "v", "i" }, "<A-e>", function()
@@ -170,3 +170,9 @@ end)
 vim.keymap.set({ "n", "v", "i" }, "<A-o>", function()
 	harpoon:list():next()
 end)
+
+-----------------------------------------------------------------------
+
+vim.keymap.set("n", "[c", function()
+	require("treesitter-context").go_to_context(vim.v.count1)
+end, { silent = true })

@@ -17,7 +17,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.cmd([[
 try
   " colorscheme gruvbox-material
-  colorscheme ashen
+  " colorscheme kanagawa-dragon
+  colorscheme bathory
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background dark

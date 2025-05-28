@@ -51,7 +51,7 @@ vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 200
 -----------------------------------------------------------------------
 
 -- Configure how new splits should be opened
@@ -95,3 +95,26 @@ vim.diagnostic.config({
 		},
 	},
 })
+
+-----------------------------------------------------------------------
+-- Set spacing to 0 on VimEnter
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.fn.system("kitty @ set-spacing padding=0")
+	end,
+})
+
+-- Reset spacing to default on VimLeave
+vim.api.nvim_create_autocmd("VimLeave", {
+	callback = function()
+		vim.fn.system("kitty @ set-spacing padding=default")
+	end,
+})
+
+-----------------------------------------------------------------------
+
+vim.api.smartindent = true
+
+-----------------------------------------------------------------------
+
+vim.g.indentscope_disable = true
