@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="avit" # set by `omz`
 
-plugins=(git)
+plugins=(git postgres docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,9 +69,17 @@ eval "$(zoxide init zsh)"
 
 
 # add binaries to $PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/cuda/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/sbin:/bin
+export PATH=$PATH:/usr/games
+export PATH=$PATH:/usr/local/games
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:/usr/lib/cuda/bin
 export PATH=$PATH:/usr/local/cuda/bin:/opt/cuda/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/home/kp/.local/bin
+export PATH=$PATH:/home/kp/.local/share/gem/ruby/3.4.0/bin
+
 
 export LC_ALL="en_GB.UTF-8" 
 export QT_QPA_PLATFORMTHEME=qt6ct
@@ -142,7 +150,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias v=nvim
 alias vi=nvim
-alias btop="btop --utf-force"
 alias cdwin="cd /mnt/win/"
 alias tmux="tmux -u"
 alias la="ls -a"
@@ -204,6 +211,7 @@ alias sopy="source ./.venv/bin/activate"
 
 alias cpc="xclip -sel c < "
 alias gv="gwenview "
+alias ff="firefox "
 
 alias bye="shutdown now"
 alias brb="sudo reboot now"
@@ -220,6 +228,8 @@ function wpsend() {
 
 alias cdi="zi"
 alias dol="dolphin "
+
+alias bd="blobdrop "
 
 # Run Fastfetch
 # if [[ -o interactive ]]; then

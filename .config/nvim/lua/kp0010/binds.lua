@@ -41,7 +41,7 @@ vim.keymap.set({ "v", "n" }, "<leader>jd", ":NoiceDisable<Return>")
 -----------------------------------------------------------------------
 
 -- Dashboard
-vim.keymap.set("n", "<leader>ds", ":Dashboard<Return>")
+vim.keymap.set("n", "<leader>ds", ":Alpha<Return>")
 -----------------------------------------------------------------------
 
 -- Spider
@@ -176,3 +176,10 @@ end)
 vim.keymap.set("n", "[c", function()
 	require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
+
+-----------------------------------------------------------------------
+-- Leet Keybinds
+
+vim.keymap.set("n", "<leader>lt", ":Leet<Return>")
+vim.keymap.set("n", "<leader>lf", ":Leet submit<Return>")
+vim.keymap.set("n", "<leader>lr", ":Leet test<Return>")

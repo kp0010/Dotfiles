@@ -1,4 +1,3 @@
--- Space as the Map Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 -----------------------------------------------------------------------
@@ -241,8 +240,8 @@ require("lazy").setup({
 				columns = {
 					"icon",
 					-- "permissions",
-					"size",
-					"mtime",
+					-- "size",
+					-- "mtime",
 				},
 				win_options = {
 					wrap = false,
@@ -254,6 +253,25 @@ require("lazy").setup({
 					conceallevel = 3,
 					concealcursor = "nvic",
 				},
+				keymaps = {
+					["g?"] = { "actions.show_help", mode = "n" },
+					["<CR>"] = "actions.select",
+					["<C-s>"] = { "actions.select", opts = { vertical = true } },
+					["<C-v>"] = { "actions.select", opts = { horizontal = true } },
+					["<C-t>"] = { "actions.select", opts = { tab = true } },
+					["<C-p>"] = "actions.preview",
+					["<C-c>"] = { "actions.close", mode = "n" },
+					["<C-r>"] = "actions.refresh",
+					["-"] = { "actions.parent", mode = "n" },
+					["_"] = { "actions.open_cwd", mode = "n" },
+					["`"] = { "actions.cd", mode = "n" },
+					["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
+					["gs"] = { "actions.change_sort", mode = "n" },
+					["gx"] = "actions.open_external",
+					["g."] = { "actions.toggle_hidden", mode = "n" },
+					["g\\"] = { "actions.toggle_trash", mode = "n" },
+				},
+				use_default_keymaps = false,
 			})
 		end,
 	},
@@ -288,13 +306,13 @@ require("lazy").setup({
 		end,
 	},
 	-------------------------------------------------------------------------------------------------
-	-- {
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	main = "ibl",
-	-- 	---@module "ibl"
-	-- 	---@type ibl.config
-	-- 	opts = { exclude = { filetypes = { "dashboard" } } },
-	-- },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = { exclude = { filetypes = { "dashboard" } } },
+	},
 	-------------------------------------------------------------------------------------------------
 	{
 		"numToStr/Comment.nvim",
@@ -302,65 +320,173 @@ require("lazy").setup({
 		lazy = false,
 	},
 	-------------------------------------------------------------------------------------------------
+	-- {
+	-- "nvimdev/dashboard-nvim",
+	-- event = "VimEnter",
+	-- config = function()
+	-- 	-- require("dashboard").setup({ header = "HELLO KP" })
+	-- 	require("dashboard").setup({
+	-- 		theme = "hyper",
+	-- 		config = {
+	-- 			header = {
+	-- 				-- "HELLO KP"
+	-- 				-- [[  ___ ______________.____    .____    ________     ____  __.__________ ]],
+	-- 				-- [[ /   |   \_   _____/|    |   |    |   \_____  \   |    |/ _|\______   \]],
+	-- 				-- [[/    ~    \    __)_ |    |   |    |    /   |   \  |      <   |     ___/]],
+	-- 				-- [[\    Y    /        \|    |___|    |___/    |    \ |    |  \  |    |    ]],
+	-- 				-- [[ \___|_  /_______  /|_______ \_______ \_______  / |____|__ \ |____|    ]],
+	-- 				-- [[       \/        \/         \/       \/       \/          \/           ]],
+	-- 				-- [[]],
+	-- 				-- [[]],
+	-- 				[[]],
+	-- 				[[]],
+	-- 				[[ ____  __.__________ _______   _______    ____ _______   ]],
+	-- 				[[|    |/ _|\______   \\   _  \  \   _  \  /_   |\   _  \  ]],
+	-- 				[[|      <   |     ___//  /_\  \ /  /_\  \  |   |/  /_\  \ ]],
+	-- 				[[|    |  \  |    |    \  \_/   \\  \_/   \ |   |\  \_/   \]],
+	-- 				[[|____|__ \ |____|     \_____  / \_____  / |___| \_____  /]],
+	-- 				[[        \/                  \/        \/              \/ ]],
+	-- 				[[]],
+	-- 				[[]],
+	-- 			},
+	-- 			week_header = {
+	-- 				enable = false,
+	-- 			},
+	-- 			shortcut = {
+	-- 				{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
+	-- 				{
+	-- 					icon = " ",
+	-- 					icon_hl = "@variable",
+	-- 					desc = "Files",
+	-- 					group = "Label",
+	-- 					action = "Telescope find_files",
+	-- 					key = "f",
+	-- 				},
+	-- 				-- {
+	-- 				-- 	desc = " Apps",
+	-- 				-- 	group = "DiagnosticHint",
+	-- 				-- 	action = "Telescope app",
+	-- 				-- 	key = "a",
+	-- 				-- },
+	-- 				-- {
+	-- 				-- 	desc = " Dotfiles",
+	-- 				-- 	group = "Number",
+	-- 				-- 	action = "Telescope dotfiles",
+	-- 				-- 	key = "d",
+	-- 				-- },
+	-- 			},
+	-- 		},
+	-- 	})
+	-- end,
+	-- dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	-- },
+	-------------------------------------------------------------------------------------------------
 	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
+		"goolord/alpha-nvim",
+		event = "VimEnter", -- load plugin after all configuration is set
+		dependencies = {
+			"nvim-tree/nvim-web-devicons", -- NOTE: Enable if needed
+		},
 		config = function()
-			-- require("dashboard").setup({ header = "HELLO KP" })
-			require("dashboard").setup({
-				theme = "hyper",
-				config = {
-					header = {
-						-- "HELLO KP"
-						-- [[  ___ ______________.____    .____    ________     ____  __.__________ ]],
-						-- [[ /   |   \_   _____/|    |   |    |   \_____  \   |    |/ _|\______   \]],
-						-- [[/    ~    \    __)_ |    |   |    |    /   |   \  |      <   |     ___/]],
-						-- [[\    Y    /        \|    |___|    |___/    |    \ |    |  \  |    |    ]],
-						-- [[ \___|_  /_______  /|_______ \_______ \_______  / |____|__ \ |____|    ]],
-						-- [[       \/        \/         \/       \/       \/          \/           ]],
-						-- [[]],
-						-- [[]],
-						[[]],
-						[[]],
-						[[ ____  __.__________ _______   _______    ____ _______   ]],
-						[[|    |/ _|\______   \\   _  \  \   _  \  /_   |\   _  \  ]],
-						[[|      <   |     ___//  /_\  \ /  /_\  \  |   |/  /_\  \ ]],
-						[[|    |  \  |    |    \  \_/   \\  \_/   \ |   |\  \_/   \]],
-						[[|____|__ \ |____|     \_____  / \_____  / |___| \_____  /]],
-						[[        \/                  \/        \/              \/ ]],
-						[[]],
-						[[]],
-					},
-					-- week_header = {
-					-- 	enable = true,
-					-- },
-					shortcut = {
-						{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
-						{
-							icon = " ",
-							icon_hl = "@variable",
-							desc = "Files",
-							group = "Label",
-							action = "Telescope find_files",
-							key = "f",
-						},
-						-- {
-						-- 	desc = " Apps",
-						-- 	group = "DiagnosticHint",
-						-- 	action = "Telescope app",
-						-- 	key = "a",
-						-- },
-						-- {
-						-- 	desc = " dotfiles",
-						-- 	group = "Number",
-						-- 	action = "Telescope dotfiles",
-						-- 	key = "d",
-						-- },
-					},
-				},
+			local alpha = require("alpha")
+			local dashboard = require("alpha.themes.dashboard")
+
+			local header = {
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				-- [[                                                                     ]],
+				-- [[       ████ ██████           █████      ██                     ]],
+				-- [[      ███████████             █████                             ]],
+				-- [[      █████████ ███████████████████ ███   ███████████   ]],
+				-- [[     █████████  ███    █████████████ █████ ██████████████   ]],
+				-- [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+				-- [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+				-- [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				-- [[                                                                       ]],
+				--
+				[[]],
+				[[]],
+				[[]],
+				[[]],
+				[[                                                          ]],
+				[[                                                          ]],
+				[[ ████ ██ ███████████████  ██████  ████ ██████  ]],
+				[[ ███████    █████████ ██ ██ ██  ████ ██ ██ ]],
+				[[ ████ ███   ████     ██ █████ ███ ████ ██ ███]],
+				[[ ████ ████  ████      ███████ ███████ ████  ███████]],
+				[[                                                  ]],
+				[[]],
+				[[]],
+				[[]],
+				[[]],
+				[[]],
+			}
+
+			dashboard.section.header.val = header
+
+			dashboard.section.buttons.val = {
+				dashboard.button("p", "   Find Project", ":Telescope projects<CR>"),
+				dashboard.button("f", "   Find File", ":Telescope find_files previewer=true<CR>"),
+				dashboard.button("l", "   Leetcode", ":Leet<CR>"),
+				dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
+				dashboard.button("n", "   Config", function()
+					require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+				end),
+				dashboard.button("z", "󰒲   Lazy", ":Lazy<CR>"),
+				dashboard.button("m", "󱌣   Mason", ":Mason<CR>"),
+				dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
+			}
+
+			-- set highlight groups
+			vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#ffffff" })
+			dashboard.section.header.opts.hl = "DashboardHeader"
+
+			vim.api.nvim_set_hl(0, "DashboardFooterNormal", { fg = "#ffffff" }) -- White (default)
+			-- vim.api.nvim_set_hl(0, "DashboardFooterOrange", { fg = "#ffa500" }) -- Orange for > 50ms
+			-- vim.api.nvim_set_hl(0, "DashboardFooterRed", { fg = "#D9534F" }) -- Red for > 60ms
+
+			vim.api.nvim_set_hl(0, "DashboardButtonKey", { fg = "#ffffff", bold = true }) -- Key color
+			vim.api.nvim_set_hl(0, "DashboardButtonText", { fg = "#ffffff" }) -- text color
+
+			for _, button in ipairs(dashboard.section.buttons.val) do
+				button.opts.hl_shortcut = "DashboardButtonKey" -- Apply to key (e.g., "e", "f")
+				button.opts.hl = "DashboardButtonText" -- Apply to the text (e.g., "File explorer")
+			end
+
+			dashboard.opts.opts.noautocmd = true -- This prevents any unwanted autocommands (e.g., BufRead, BufEnter)
+
+			alpha.setup(dashboard.opts) -- setup
+
+			vim.api.nvim_create_autocmd("User", { -- Measure start up time
+				pattern = "LazyVimStarted",
+				callback = function()
+					local plugins = require("lazy").stats()
+					local time = (math.floor(plugins.startuptime * 100) / 100)
+					local footer_hl = "DashboardFooterNormal" -- Default white
+
+					if time > 60 then
+						footer_hl = "DashboardFooterRed" -- Red if > 60ms
+					elseif time > 50 then
+						footer_hl = "DashboardFooterOrange" -- Orange if > 50ms
+					end
+
+					dashboard.section.footer.opts.hl = footer_hl
+
+					dashboard.section.footer.val = {
+						" ",
+						" ",
+						" ",
+						"󱐌 " .. plugins.count .. " plugins loaded in " .. time .. " ms",
+					}
+					pcall(vim.cmd.AlphaRedraw)
+				end,
 			})
 		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	-------------------------------------------------------------------------------------------------
 	{
@@ -391,10 +517,8 @@ require("lazy").setup({
 					component_separators = { left = "\\", right = "\\" },
 					section_separators = { left = "", right = "" },
 
-					disabled_filetypes = {
-						statusline = {},
-						winbar = {},
-					},
+					disabled_filetypes = { "alpha", "neo-tree", "snacks_dashboard" },
+
 					ignore_focus = {},
 					always_divide_middle = true,
 					globalstatus = false,
@@ -437,6 +561,756 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	enabled = vim.o.laststatus ~= 0,
+	-- 	dependencies = {
+	-- 		{
+	-- 			"cameronr/lualine-pretty-path",
+	-- 			-- dev = true,
+	-- 		},
+	-- 	},
+	-- 	-- config = function(_, opts)
+	-- 	opts = function()
+	-- 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
+	--
+	-- 		--- From: https://github.com/nvim-lualine/lualine.nvim/wiki/Component-snippets
+	-- 		--- @param trunc_width number trunctates component when screen width is less then trunc_width
+	-- 		--- @param trunc_len number truncates component to trunc_len number of chars
+	-- 		--- @param hide_width number hides component when window width is smaller then hide_width
+	-- 		--- @param no_ellipsis boolean whether to disable adding '...' at end after truncation
+	-- 		--- return function that can format the component accordingly
+	-- 		local function trunc(trunc_width, trunc_len, hide_width, no_ellipsis)
+	-- 			return function(str)
+	-- 				local win_width = vim.o.columns
+	-- 				if hide_width and win_width < hide_width then
+	-- 					return ""
+	-- 				elseif trunc_width and trunc_len and win_width < trunc_width and #str > trunc_len then
+	-- 					return str:sub(1, trunc_len) .. (no_ellipsis and "" or "…")
+	-- 				end
+	-- 				return str
+	-- 			end
+	-- 		end
+	--
+	-- 		-- Show LSP status, borrowed from Heirline cookbook
+	-- 		-- https://github.com/rebelot/heirline.nvim/blob/master/cookbook.md#lsp
+	-- 		local function lsp_status_all()
+	-- 			local haveServers = false
+	-- 			local names = {}
+	-- 			for _, server in pairs(vim.lsp.get_clients({ bufnr = 0 })) do
+	-- 				-- msg = ' '
+	-- 				haveServers = true
+	-- 				table.insert(names, server.name)
+	-- 			end
+	-- 			if not haveServers then
+	-- 				return ""
+	-- 			end
+	-- 			if vim.g.custom_lualine_show_lsp_names then
+	-- 				return " " .. table.concat(names, ",")
+	-- 			end
+	-- 			return " "
+	-- 		end
+	--
+	-- 		-- Override 'encoding': Don't display if encoding is UTF-8.
+	-- 		local encoding_only_if_not_utf8 = function()
+	-- 			local ret, _ = (vim.bo.fenc or vim.go.enc):gsub("^utf%-8$", "")
+	-- 			return ret
+	-- 		end
+	-- 		-- fileformat: Don't display if &ff is unix.
+	-- 		local fileformat_only_if_not_unix = function()
+	-- 			local ret, _ = vim.bo.fileformat:gsub("^unix$", "")
+	-- 			return ret
+	-- 		end
+	--
+	-- 		Snacks.toggle({
+	-- 			name = "lualine symbols",
+	-- 			get = function()
+	-- 				return vim.b.trouble_lualine ~= false
+	-- 			end,
+	-- 			set = function(state)
+	-- 				vim.b.trouble_lualine = state
+	-- 			end,
+	-- 		}):map("<leader>vl")
+	--
+	-- 		Snacks.toggle({
+	-- 			name = "lualine lsp names",
+	-- 			get = function()
+	-- 				return vim.g.custom_lualine_show_lsp_names
+	-- 			end,
+	-- 			set = function(state)
+	-- 				vim.g.custom_lualine_show_lsp_names = state
+	-- 			end,
+	-- 		}):map("<leader>vL")
+	--
+	-- 		Snacks.toggle({
+	-- 			name = "lualine session name",
+	-- 			get = function()
+	-- 				return vim.g.custom_lualine_show_session_name
+	-- 			end,
+	-- 			set = function(state)
+	-- 				vim.g.custom_lualine_show_session_name = state
+	-- 			end,
+	-- 		}):map("<leader>vs")
+	--
+	-- 		return {
+	-- 			options = {
+	-- 				-- When theme is set to auto, Lualine uses dofile instead of require
+	-- 				-- to load the theme. We need the theme to be loaded via require since
+	-- 				-- we modify the cached singleton in tokyonight's config function to
+	-- 				-- add different colors for the x section
+	-- 				theme = function()
+	-- 					if vim.g.colors_name:match("^tokyonight") then
+	-- 						return require("lualine.themes." .. vim.g.colors_name)
+	-- 					end
+	-- 					-- fall through case just needed for telescope theme browser
+	-- 					return require("lualine.utils.loader").load_theme("auto")
+	-- 				end,
+	-- 				component_separators = { left = "╲", right = "╱" },
+	-- 				disabled_filetypes = { "alpha", "neo-tree", "snacks_dashboard" },
+	-- 				section_separators = { left = "", right = "" },
+	-- 				ignore_focus = { "trouble" },
+	-- 				globalstatus = true,
+	-- 			},
+	-- 			sections = {
+	-- 				lualine_a = {
+	-- 					{
+	-- 						"mode",
+	-- 						fmt = trunc(130, 3, 0, true),
+	-- 					},
+	-- 				},
+	-- 				lualine_b = {
+	-- 					{
+	-- 						"branch",
+	-- 						fmt = trunc(70, 15, 65, true),
+	-- 						separator = "",
+	-- 					},
+	-- 				},
+	-- 				-- lualine_c = {
+	-- 				-- 	{
+	-- 				-- 		"pretty_path",
+	-- 				-- 		providers = {
+	-- 				-- 			default = require("util.pretty_path_harpoon"),
+	-- 				-- 		},
+	-- 				-- 		directories = {
+	-- 				-- 			max_depth = 4,
+	-- 				-- 		},
+	-- 				-- 		highlights = {
+	-- 				-- 			newfile = "LazyProgressDone",
+	-- 				-- 		},
+	-- 				-- 		separator = "",
+	-- 				-- 	},
+	-- 				-- },
+	-- 				lualine_x = {
+	-- 					{
+	-- 						function()
+	-- 							return require("auto-session.lib").current_session_name(true)
+	-- 						end,
+	-- 						cond = function()
+	-- 							return vim.g.custom_lualine_show_session_name
+	-- 						end,
+	-- 					},
+	-- 					{
+	-- 						"diagnostics",
+	-- 						-- symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' },
+	-- 						symbols = { error = " ", warn = " ", info = " ", hint = " " },
+	-- 						separator = "",
+	-- 					},
+	-- 					{
+	-- 						"diff",
+	-- 						symbols = {
+	-- 							added = " ",
+	-- 							modified = " ",
+	-- 							removed = " ",
+	-- 						},
+	-- 						fmt = trunc(0, 0, 60, true),
+	-- 						separator = "",
+	-- 					},
+	-- 					{
+	-- 						function()
+	-- 							return "recording @" .. vim.fn.reg_recording()
+	-- 						end,
+	-- 						cond = function()
+	-- 							return vim.fn.reg_recording() ~= ""
+	-- 						end,
+	-- 						color = { fg = "#ff007c" },
+	-- 						separator = "",
+	-- 					},
+	-- 					{
+	-- 						lazy_status.updates,
+	-- 						cond = lazy_status.has_updates,
+	-- 						-- color = { fg = '#3d59a1' },
+	-- 						fmt = trunc(0, 0, 160, true), -- hide when window is < 100 columns
+	-- 						separator = "",
+	-- 					},
+	--
+	-- 					-- require("util.lualine").cmp_source("supermaven", "󰰣"),
+	--
+	-- 					{
+	-- 						lsp_status_all,
+	-- 						fmt = trunc(0, 8, 140, false),
+	-- 						separator = "",
+	-- 					},
+	-- 					{
+	-- 						encoding_only_if_not_utf8,
+	-- 						fmt = trunc(0, 0, 140, true), -- hide when window is < 80 columns
+	-- 						separator = "",
+	-- 					},
+	-- 					{
+	-- 						fileformat_only_if_not_unix,
+	-- 						fmt = trunc(0, 0, 140, true), -- hide when window is < 80 columns
+	-- 						separator = "",
+	-- 					},
+	-- 				},
+	-- 				lualine_y = {
+	-- 					{ "progress", fmt = trunc(0, 0, 40, true) },
+	-- 				},
+	-- 				lualine_z = {
+	-- 					{ "location", fmt = trunc(0, 0, 80, true) },
+	-- 				},
+	-- 			},
+	-- 			inactive_sections = {
+	-- 				lualine_c = {
+	-- 					-- {
+	-- 					-- 	"pretty_path",
+	-- 					-- 	"filename",
+	-- 					-- 	symbols = {
+	-- 					-- 		modified = "+", -- Text to show when the file is modified.
+	-- 					-- 		readonly = "", -- Text to show when the file is non-modifiable or readonly.
+	-- 					-- 	},
+	-- 					-- },
+	-- 				},
+	-- 			},
+	-- 			extensions = {
+	-- 				"lazy",
+	-- 				"mason",
+	-- 				"neo-tree",
+	-- 				"nvim-dap-ui",
+	-- 				"oil",
+	-- 				"quickfix",
+	-- 				"toggleterm",
+	-- 				"trouble",
+	-- 			},
+	-- 		}
+	-- 	end,
+	-- },
+	-------------------------------------------------------------------------------------------------
+	-- {
+	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		keys = function()
+			local keys = {
+				-- 					-- {
+				-- 					-- 	"[l",
+				-- 					-- 	function()
+				-- 					-- 		Snacks.words.jump(-1, true)
+				-- 					-- 	end,
+				-- 					-- 	desc = "Next LSP highlight",
+				-- 					-- },
+				-- 					-- {
+				-- 					-- 	"]l",
+				-- 					-- 	function()
+				-- 					-- 		Snacks.words.jump(1, true)
+				-- 					-- 	end,
+				-- 					-- 	desc = "Next LSP highlight",
+				-- 					-- },
+				{
+					"<leader>cc",
+					function()
+						Snacks.scratch()
+					end,
+					desc = "Scratch pad",
+				},
+				{
+					"<leader>cC",
+					function()
+						Snacks.scratch.select()
+					end,
+					desc = "Select scratch pad",
+				},
+				-- 					-- {
+				-- 					-- 	"<leader>sp",
+				-- 					-- 	function()
+				-- 					-- 		Snacks.notifier.show_history({ reverse = true })
+				-- 					-- 	end,
+				-- 					-- 	desc = "Show notifs",
+				-- 					-- },
+				-- 					-- {
+				-- 					-- 	"<leader>wp",
+				-- 					-- 	function()
+				-- 					-- 		Snacks.notifier.hide()
+				-- 					-- 	end,
+				-- 					-- 	desc = "Dismiss popups",
+				-- 					-- },
+				-- 					-- {
+				-- 					-- 	"<leader>e",
+				-- 					-- 	function()
+				-- 					-- 		Snacks.picker.explorer()
+				-- 					-- 	end,
+				-- 					-- 	desc = "Explorer",
+				-- },
+			}
+			if vim.g.picker_engine ~= "snacks" then
+				return keys
+			end
+			--
+			-- 				local picker_keys = {
+			-- 					-- {
+			-- 					-- 	"<leader><leader>",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.buffers()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Buffers",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>/",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.grep()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Grep",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>:",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.command_history()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Command History",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sf",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.files()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Find Files",
+			-- 					-- },
+			-- 					-- -- find
+			-- 					-- {
+			-- 					-- 	"<leader>sB",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.pickers()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Pickers",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sgf",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_files()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Find Git Files",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>s.",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.recent()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Recent",
+			-- 					-- },
+			-- 					-- -- git
+			-- 					-- {
+			-- 					-- 	"<leader>sgc",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_log()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Git Log",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sgl",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_log()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Git Log",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sgs",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_status()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Git Status",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sgb",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_branches()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Git Branches",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sgz",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.git_stash()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Git Stash",
+			-- 					-- },
+			-- 					-- -- Grep
+			-- 					-- {
+			-- 					-- 	"<leader>sz",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lines()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Fuzzy find in buffer",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sb",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.grep_buffers()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Grep Open Buffers",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sw",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.grep_word()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Visual selection or word",
+			-- 					-- 	mode = { "n", "x" },
+			-- 					-- },
+			-- 					-- -- search
+			-- 					-- {
+			-- 					-- 	'<leader>s"',
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.registers()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Registers",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sa",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.autocmds()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Autocmds",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sc",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.command_history()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Command History",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sv",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.commands()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Commands",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sd",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.diagnostics()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Diagnostics",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sh",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.help()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Help Pages",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sH",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.highlights()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Highlights",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sj",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.jumps()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Jumps",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sk",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.keymaps()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Keymaps",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sl",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.loclist()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Location List",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sM",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.man()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Man Pages",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sm",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.marks()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Marks",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>s'",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.marks()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Marks",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sr",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.resume()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Resume",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>.",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.resume()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Resume",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sq",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.qflist()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Quickfix List",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sC",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.colorschemes()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Colorschemes",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>su",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.undo()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Undo",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>qp",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.projects()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Projects",
+			-- 					-- },
+			-- 					-- -- LSP
+			-- 					-- {
+			-- 					-- 	"gd",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_definitions()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Goto Definition",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"gr",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_references()
+			-- 					-- 	end,
+			-- 					-- 	nowait = true,
+			-- 					-- 	desc = "References",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"gI",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_implementations()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Goto Implementation",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"gy",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_type_definitions()
+			-- 					-- 	end,
+			-- 					-- 	desc = "Goto T[y]pe Definition",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>ss",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_symbols()
+			-- 					-- 	end,
+			-- 					-- 	desc = "LSP Symbols",
+			-- 					-- },
+			-- 					-- {
+			-- 					-- 	"<leader>sS",
+			-- 					-- 	function()
+			-- 					-- 		Snacks.picker.lsp_workspace_symbols()
+			-- 					-- 	end,
+			-- 					-- 	desc = "LSP Workspace Symbols",
+			-- 					-- },
+			--
+			-- 					-- Notifications
+			-- 					{
+			-- 						"<leader>sP",
+			-- 						function()
+			-- 							Snacks.picker.notifications()
+			-- 						end,
+			-- 						desc = "Search notifs",
+			-- 					},
+			-- 				}
+			--
+			-- 				for _, entry in ipairs(picker_keys) do
+			-- 					table.insert(keys, entry)
+			-- 				end
+			-- --
+			-- 				return keys
+		end,
+		-- opts = {
+		-- 				debug = { enabled = true },
+		-- 				indent = {
+		-- 					enabled = true,
+		-- 					animate = { enabled = true },
+		-- 				},
+		-- 				input = { enabled = true },
+		-- 				notifier = {
+		-- 					enabled = true,
+		-- 					style = "minimal",
+		-- 				},
+		-- 				picker = {
+		-- 					enabled = vim.g.picker_engine == "snacks",
+		-- 					formatters = {
+		-- 						file = {
+		-- 							filename_first = true, -- display filename before the file path
+		-- 						},
+		-- 					},
+		-- 					layout = {
+		-- 						cycle = true,
+		-- 						--- Use the default layout or vertical if the window is too narrow
+		-- 						preset = function()
+		-- 							return vim.o.columns >= 120 and "telescope" or "vertical"
+		-- 						end,
+		-- 					},
+		-- 					win = {
+		-- 						-- input window
+		-- 						input = {
+		-- 							keys = {
+		-- 								["<Esc>"] = { "close", mode = { "n", "i" } },
+		-- 								["<C-_>"] = { "toggle_help", mode = { "n", "i" } },
+		-- 								["<c-p>"] = { "toggle_preview", mode = { "i", "n" } },
+		-- 								["<pagedown>"] = { "list_scroll_down", mode = { "i", "n" } },
+		-- 								["<pageup>"] = { "list_scroll_up", mode = { "i", "n" } },
+		-- 								["<a-d>"] = { "bufdelete", mode = { "i", "n" } },
+		-- 							},
+		-- 						},
+		-- 					},
+		-- 				},
+		-- 				quickfile = { enabled = true },
+		-- 				words = { enabled = true },
+		-- 				dashboard = {
+		-- 					enabled = false,
+		-- 					preset = {
+		-- 						header = [[
+		-- ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+		-- ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+		-- ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+		-- ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+		-- ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+		-- ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+		--                                             ]]
+		-- 							.. vim.version().major
+		-- 							.. "."
+		-- 							.. vim.version().minor
+		-- 							.. "."
+		-- 							.. vim.version().patch,
+		-- 						keys = {
+		-- 							{
+		-- 								icon = " ",
+		-- 								key = "f",
+		-- 								desc = "Find file",
+		-- 								action = ":lua Snacks.dashboard.pick('files')",
+		-- 							},
+		-- 							{
+		-- 								icon = " ",
+		-- 								key = "g",
+		-- 								desc = "Find text",
+		-- 								action = ":lua Snacks.dashboard.pick('live_grep')",
+		-- 							},
+		-- 							{ icon = " ", key = "e", desc = "New file", action = ":ene" },
+		-- 							{
+		-- 								icon = " ",
+		-- 								key = "r",
+		-- 								desc = "Recent files",
+		-- 								action = ":lua Snacks.dashboard.pick('oldfiles')",
+		-- 							},
+		-- 							{ icon = "󰁯 ", key = "w", desc = "Restore session", action = ":SessionSearch" },
+		-- 							{ icon = "󰊢 ", key = "n", desc = "Neogit", action = ":Neogit" },
+		-- 							{
+		-- 								icon = "󰒲 ",
+		-- 								key = "l",
+		-- 								desc = "Lazy",
+		-- 								action = ":Lazy",
+		-- 								enabled = package.loaded.lazy ~= nil,
+		-- 							},
+		-- 							{ icon = " ", key = "m", desc = "Mason", action = ":Mason" },
+		-- 							{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
+		-- 						},
+		-- 					},
+		-- 				},
+		-- 				styles = {
+		-- 					notification_history = {
+		-- 						keys = { ["<esc>"] = "close" },
+		-- 					},
+		-- 				},
+		-- 			},
+		init = function()
+			vim.api.nvim_create_autocmd("User", {
+				pattern = "VeryLazy",
+				callback = function()
+					-- Setup some globals for debugging (lazy-loaded)
+					_G.dd = function(...)
+						Snacks.debug.inspect(...)
+					end
+					_G.bt = function()
+						Snacks.debug.backtrace()
+					end
+					vim.print = _G.dd -- Override print to use snacks for `:=` command
+
+					-- Create some toggle mappings
+					Snacks.toggle
+						.option("background", { off = "light", on = "dark", name = "dark background" })
+						:map("<leader>vb")
+					Snacks.toggle.option("foldcolumn", { off = "0", on = "1", name = "foldcolumn" }):map("<leader>vz")
+					Snacks.toggle.option("cursorline", { name = "cursorline" }):map("<leader>vc")
+					Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>vw")
+					Snacks.toggle.inlay_hints():map("<leader>vH")
+					Snacks.toggle.diagnostics():map("<leader>vd")
+					Snacks.toggle.indent():map("<leader>vi")
+
+					-- Toggle the profiler
+					Snacks.toggle.profiler():map("<leader>cp")
+					-- Toggle the profiler highlights
+					Snacks.toggle.profiler_highlights():map("<leader>vP")
+				end,
+			})
+		end,
+	},
+	-- 		{
+	-- 			"folke/trouble.nvim",
+	-- 			optional = true,
+	-- 			specs = {
+	-- 				"folke/snacks.nvim",
+	-- 				opts = function(_, opts)
+	-- 					return vim.tbl_deep_extend("force", opts or {}, {
+	-- 						picker = {
+	-- 							actions = require("trouble.sources.snacks").actions,
+	-- 							win = {
+	-- 								input = {
+	-- 									keys = {
+	-- 										["<c-t>"] = { "trouble_open", mode = { "n", "i" } },
+	-- 									},
+	-- 								},
+	-- 							},
+	-- 						},
+	-- 					})
+	-- 				end,
+	-- 			},
+	-- 		},
+	-- 	},
 	-------------------------------------------------------------------------------------------------
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
@@ -592,6 +1466,7 @@ require("lazy").setup({
 			-- Enable Telescope extensions if they are installed
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
+			pcall(require("telescope").load_extension, "projects")
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
@@ -1337,14 +2212,14 @@ require("lazy").setup({
 			},
 
 			-- tree
-			{ "<C-e>", "<cmd>BlinkTree reveal<cr>", desc = "Reveal current file in tree" },
-			{ "<leader>E", "<cmd>BlinkTree toggle<cr>", desc = "Reveal current file in tree" },
-			{ "<leader>e", "<cmd>BlinkTree toggle-focus<cr>", desc = "Toggle file tree focus" },
+			-- { "<C-e>", "<cmd>BlinkTree reveal<cr>", desc = "Reveal current file in tree" },
+			-- { "<leader>E", "<cmd>BlinkTree toggle<cr>", desc = "Reveal current file in tree" },
+			-- { "<leader>e", "<cmd>BlinkTree toggle-focus<cr>", desc = "Toggle file tree focus" },
 		},
 		lazy = false,
 		opts = {
 			chartoggle = { enabled = true },
-			indent = { enabled = true },
+			indent = { enabled = false },
 			tree = { enabled = true },
 		},
 		-- {
@@ -1405,7 +2280,7 @@ require("lazy").setup({
 		config = function()
 			require("org-list").setup({
 				mapping = {
-					key = "<leader>lt", -- nvim-orgmode users: you might want to change this to <leader>olt
+					key = "<leader>lst", -- nvim-orgmode users: you might want to change this to <leader>olt
 					desc = "Toggle: Cycle through list types",
 				},
 				checkbox_toggle = {
