@@ -4,10 +4,9 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="avit" # set by `omz`
 
-plugins=(git postgres docker)
+plugins=(git postgres docker battery zsh-transient-prompt)
 
 source $ZSH/oh-my-zsh.sh
-
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -237,3 +236,14 @@ alias bd="blobdrop "
 #     fastfetch --logo-width 49 --logo-height 23 --kitty ~/.config/fastfetch/pngs/MinimalistWaves_Sq_NoBG.png
 #     echo "\n"
 # fi
+
+TRANSIENT_PROMPT_PROMPT=" 
+%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
+TRANSIENT_PROMPT_PROMPT+=' $(git_prompt_info)'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}%1{✗%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
+TRANSIENT_PROMPT_TRANSIENT_PROMPT=" %(?:%{$fg_bold[green]%}%1{➜%} "

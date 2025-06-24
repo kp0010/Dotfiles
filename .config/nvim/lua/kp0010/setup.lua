@@ -1,4 +1,43 @@
--- Set to true if you have a Nerd Font installed and selected in the terminal
+-- Set the Theme
+vim.cmd([[
+	try
+		" colorscheme gruvbox-material
+		" colorscheme ashen
+		colorscheme kanagawa-dragon
+	catch /^Vim\%((\a\+)\)\=:E185/
+		colorscheme default
+	endtry
+]])
+
+-----------------------------------------------------------------------
+
+-- Set spacing to 0 on VimEnter
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.fn.system("kitty @ set-spacing padding=0")
+	end,
+})
+
+-- Reset spacing to default on VimLeave
+vim.api.nvim_create_autocmd("VimLeave", {
+	callback = function()
+		vim.fn.system("kitty @ set-spacing padding=default")
+	end,
+})
+
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
+-----------------------------------------------------------------------
+-- [[ Setting options ]]
+
+-- Have Nerd Font Yes Bruh
 vim.g.have_nerd_font = true
 -----------------------------------------------------------------------
 
@@ -6,13 +45,24 @@ vim.g.have_nerd_font = true
 vim.opt.shell = "/bin/zsh"
 -----------------------------------------------------------------------
 
--- [[ Setting options ]]
+-- vim.diagnostic.config({ virtual_lines = true })
+vim.diagnostic.config({ virtual_text = true })
+-----------------------------------------------------------------------
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h11" }
 -----------------------------------------------------------------------
 
 -- Tab width
 vim.opt.shiftwidth = 4
+-----------------------------------------------------------------------
+
+-- Search Opts
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+-----------------------------------------------------------------------
+
+-- Search Opts
+vim.opt.termguicolors = true
 -----------------------------------------------------------------------
 
 -- Make line numbers default
@@ -29,6 +79,7 @@ vim.opt.mouse = "a"
 
 -- Copies Indent from current line to the new one
 vim.opt.autoindent = false
+vim.opt.smartindent = true
 -----------------------------------------------------------------------
 
 -- Case-Insesitive Search unless /C or Uppercase in search
@@ -75,7 +126,7 @@ vim.opt.cursorline = true
 -----------------------------------------------------------------------
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 15
+vim.opt.scrolloff = 8
 -----------------------------------------------------------------------
 
 -- Color line number to Display Errors and Warns
@@ -95,25 +146,6 @@ vim.diagnostic.config({
 		},
 	},
 })
-
------------------------------------------------------------------------
--- Set spacing to 0 on VimEnter
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		vim.fn.system("kitty @ set-spacing padding=0")
-	end,
-})
-
--- Reset spacing to default on VimLeave
-vim.api.nvim_create_autocmd("VimLeave", {
-	callback = function()
-		vim.fn.system("kitty @ set-spacing padding=default")
-	end,
-})
-
------------------------------------------------------------------------
-
-vim.api.smartindent = true
 
 -----------------------------------------------------------------------
 

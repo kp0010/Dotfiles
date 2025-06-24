@@ -22,7 +22,8 @@ vim.keymap.set("n", "x", '"_x')
 -- Copy to Clipboard
 vim.keymap.set({ "v", "n" }, "<leader>y", '"+y')
 vim.keymap.set({ "v", "n" }, "<leader>Y", '"+yg_')
-vim.keymap.set({ "v", "n" }, "<leader>yy", '"+yy')
+vim.keymap.set("n", "<leader>yy", '"+yyg_')
+vim.keymap.set("n", "<leader>yy", '"+yyg_')
 -----------------------------------------------------------------------
 
 -- Paste from Clipboard
@@ -30,14 +31,15 @@ vim.keymap.set({ "v", "n" }, "<leader>p", '"+p')
 vim.keymap.set({ "v", "n" }, "<leader>P", '"+P')
 -----------------------------------------------------------------------
 
--- Delete to Clipboard
+-- Delete to Clipboard and Delete without overwrite
 vim.keymap.set({ "v", "n" }, "<leader>d", '"+d')
 vim.keymap.set({ "v", "n" }, "<leader>D", '"+D')
+vim.keymap.set("x", "<leader>pd", '"_dP')
 -----------------------------------------------------------------------
 
 -- Noice dismiss and disable
-vim.keymap.set({ "v", "n" }, "<leader>jj", ":NoiceDismiss<Return>")
-vim.keymap.set({ "v", "n" }, "<leader>jd", ":NoiceDisable<Return>")
+-- vim.keymap.set({ "v", "n" }, "<leader>jj", ":NoiceDismiss<Return>")
+-- vim.keymap.set({ "v", "n" }, "<leader>jd", ":NoiceDisable<Return>")
 -----------------------------------------------------------------------
 
 -- Dashboard
@@ -97,10 +99,10 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -----------------------------------------------------------------------
 
 -- CTRL+<hjkl> to switch between windows
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set({ "n", "v", "i" }, "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set({ "n", "v", "i" }, "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set({ "n", "v", "i" }, "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set({ "n", "v", "i" }, "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 -----------------------------------------------------------------------
 
 -- UndoTree Toggle
@@ -136,43 +138,6 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 -----------------------------------------------------------------------
 
--- Harpoon Binds
-local harpoon = require("harpoon")
-
--- REQUIRED
--- harpoon:setup()
--- REQUIRED
-
-vim.keymap.set({ "n", "v" }, "<leader>a", function()
-	harpoon:list():add()
-end)
-vim.keymap.set({ "n", "v", "i" }, "<A-e>", function()
-	harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
-
-vim.keymap.set({ "n", "v", "i" }, "<A-f>", function()
-	harpoon:list():select(1)
-end)
-vim.keymap.set({ "n", "v", "i" }, "<A-d>", function()
-	harpoon:list():select(2)
-end)
-vim.keymap.set({ "n", "v", "i" }, "<A-s>", function()
-	harpoon:list():select(3)
-end)
-vim.keymap.set({ "n", "v", "i" }, "<A-a>", function()
-	harpoon:list():select(4)
-end)
-
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set({ "n", "v", "i" }, "<A-i>", function()
-	harpoon:list():prev()
-end)
-vim.keymap.set({ "n", "v", "i" }, "<A-o>", function()
-	harpoon:list():next()
-end)
-
------------------------------------------------------------------------
-
 vim.keymap.set("n", "[c", function()
 	require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
@@ -181,5 +146,27 @@ end, { silent = true })
 -- Leet Keybinds
 
 vim.keymap.set("n", "<leader>lt", ":Leet<Return>")
+vim.keymap.set("n", "<leader>lb", ":Leet<Return>")
 vim.keymap.set("n", "<leader>lf", ":Leet submit<Return>")
 vim.keymap.set("n", "<leader>lr", ":Leet test<Return>")
+vim.keymap.set("n", "<leader>ll", ":Leet lang<Return>")
+vim.keymap.set("n", "<leader>lls", ":Leet last_submit<Return>")
+-----------------------------------------------------------------------
+-- Moving While in Visual Mode
+
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
+-----------------------------------------------------------------------
+-- Join but without Moving Cursor
+
+vim.keymap.set("n", "J", "mzJ'z")
+-----------------------------------------------------------------------
+-- Move with C-D and C-U with cursor in center
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-----------------------------------------------------------------------
+-- Move with n and N with cursor in center
+
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
