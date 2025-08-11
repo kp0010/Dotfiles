@@ -6,6 +6,7 @@ return {
 	"rebelot/kanagawa.nvim",
 	"projekt0n/github-nvim-theme",
 	"folke/tokyonight.nvim",
+	"nyoom-engineering/oxocarbon.nvim",
 
 	{
 		"metalelf0/black-metal-theme-neovim",

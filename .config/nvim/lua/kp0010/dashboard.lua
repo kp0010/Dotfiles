@@ -8,21 +8,43 @@ return {
 			local alpha = require("alpha")
 			local dashboard = require("alpha.themes.dashboard")
 
+			-- local header = {
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[                                                          ]],
+			-- 	[[                                                          ]],
+			-- 	[[ ████ ██ ███████████████  ██████  ████ ██████  ]],
+			-- 	[[ ███████    █████████ ██ ██ ██  ████ ██ ██ ]],
+			-- 	[[ ████ ███   ████     ██ █████ ███ ████ ██ ███]],
+			-- 	[[ ████ ████  ████      ███████ ███████ ████  ███████]],
+			-- 	[[                                                  ]],
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[]],
+			-- 	[[]],
+			-- }
+			--
+
 			local header = {
 				[[]],
 				[[]],
 				[[]],
 				[[]],
-				[[                                                          ]],
-				[[                                                          ]],
-				[[ ████ ██ ███████████████  ██████  ████ ██████  ]],
-				[[ ███████    █████████ ██ ██ ██  ████ ██ ██ ]],
-				[[ ████ ███   ████     ██ █████ ███ ████ ██ ███]],
-				[[ ████ ████  ████      ███████ ███████ ████  ███████]],
-				[[                                                  ]],
-				[[]],
-				[[]],
-				[[]],
+				[[   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ]],
+				[[    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ]],
+				[[          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ]],
+				[[           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ]],
+				[[          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ]],
+				[[   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ]],
+				[[  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ]],
+				[[ ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ]],
+				[[ ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ]],
+				[[      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ]],
+				[[       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ]],
+				[[               KP0010              ]],
 				[[]],
 				[[]],
 			}
@@ -30,17 +52,30 @@ return {
 			dashboard.section.header.val = header
 
 			dashboard.section.buttons.val = {
-				dashboard.button("p", "   Find Project", ":Telescope projects<CR>"),
-				dashboard.button("f", "󰱽   Find File", ":Telescope find_files previewer=true<CR>"),
-				dashboard.button("l", "   Leetcode", ":Leet<CR>"),
-				dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
-				dashboard.button("n", "   Config", function()
+				dashboard.button("f", "   Find Files", ":Telescope find_files previewer=true<CR>"),
+				dashboard.button("r", "󰈚   Recent Files", ":Telescope oldfiles<CR>"),
+				dashboard.button("p", "   Find Project", ":Telescope projects<CR>"),
+				dashboard.button("l", "   Leetcode", ":Leet<CR>"),
+				dashboard.button("n", "   Config", function()
 					require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
 				end),
-				dashboard.button("z", "󰒲   Lazy", ":Lazy<CR>"),
-				dashboard.button("m", "󱌣   Mason", ":Mason<CR>"),
-				dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
+				-- dashboard.button("m", "󱌣   Mason", ":Mason<CR>"),
+				-- dashboard.button("z", "󰒲   lazy", ":lazy<cr>"),
+				-- dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
 			}
+
+			-- Set hidden keybinds only for the dashboard
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "alpha",
+				callback = function(event)
+					local opts = { noremap = true, silent = true, buffer = event.buf }
+
+					-- Example hidden bindings:
+					vim.keymap.set("n", "q", ":q<CR>", opts) -- Quit from dashboard
+					vim.keymap.set("n", "z", ":Lazy<CR>", opts) -- Open Lazy
+					vim.keymap.set("n", "m", ":Mason<CR>", opts) -- Open Lazy
+				end,
+			})
 
 			-- set highlight groups
 			vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#C34043" })
@@ -51,14 +86,14 @@ return {
 			vim.api.nvim_set_hl(0, "DashboardFooterRed", { fg = "#F9534F" }) -- Red for > 60ms
 
 			vim.api.nvim_set_hl(0, "DashboardButtonKey", { fg = "#ffffff", bold = true }) -- Key color
-			vim.api.nvim_set_hl(0, "DashboardButtonText", { fg = "#ffffff", bold = true }) -- text color
+			vim.api.nvim_set_hl(0, "DashboardButtonText", { fg = "#ffffff", bold = false }) -- text color
 
 			for _, button in ipairs(dashboard.section.buttons.val) do
 				button.opts.hl_shortcut = "DashboardButtonKey"
 				button.opts.hl = "DashboardButtonText"
 			end
 
-			dashboard.opts.opts.noautocmd = true -- This prevents any unwanted autocommands (e.g., BufRead, BufEnter)
+			dashboard.opts.opts.noautocmd = false -- This prevents any unwanted autocommands (e.g., BufRead, BufEnter)
 
 			alpha.setup(dashboard.opts) -- setup
 

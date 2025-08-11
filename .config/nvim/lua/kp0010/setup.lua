@@ -3,7 +3,8 @@ vim.cmd([[
 	try
 		" colorscheme gruvbox-material
 		" colorscheme ashen
-		colorscheme kanagawa-dragon
+		" colorscheme kanagawa-dragon
+		colorscheme rose-pine-moon
 	catch /^Vim\%((\a\+)\)\=:E185/
 		colorscheme default
 	endtry
