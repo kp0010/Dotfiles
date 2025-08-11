@@ -12,6 +12,8 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+HISTCONTROL=ignoreboth # duplicates & space starting commands ignored
+
 bindkey -e
 
 # End of lines configured by zsh-newuser-install
@@ -34,6 +36,17 @@ setopt share_history
 
 # Ignore duplicate commands in history file
 setopt histignorealldups
+
+
+setopt autocd # type a dir to cfg
+setopt auto_param_slash # when a dir is completed, add a / instead of a trailing space
+setopt no_case_glob no_case_match # make cmp case insensitive
+setopt globdots # include dotfiles
+setopt extended_glob # match ~ # A
+setopt interactive_comments # allow comments in shell I
+unsetopt prompt_sp # don't autoclean blanklines
+stty stop undef # disable accidental ctrl s
+
 
 # Fixing some keys inside zsh
 autoload -Uz select-word-style
@@ -78,11 +91,12 @@ export PATH=$PATH:/usr/lib/cuda/bin
 export PATH=$PATH:/usr/local/cuda/bin:/opt/cuda/bin
 export PATH=$PATH:/home/kp/.local/bin
 export PATH=$PATH:/home/kp/.local/share/gem/ruby/3.4.0/bin
+export PATH=$PATH:/home/kp/.local/go/bin
+export PATH=$PATH:/home/kp/.local/scripts/
 
-
+# end of $PATH exports
 export LC_ALL="en_GB.UTF-8" 
 export QT_QPA_PLATFORMTHEME=qt6ct
-# end of $PATH exports
 
 # bash's command not found auto suggest
 command_not_found_handler () {
@@ -120,11 +134,25 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[3~" delete-char
 
+# bindkey "^a" beginning-of-line
+# bindkey "^i" end-of-line
+# bindkey "^h" backward-word
+# bindkey "^l" forward-word
+bindkey "^y" autosuggest-accept
+
+# bindkey "^H" backward-kill-word
+
+# bindkey "^k" history-search-backward
+# bindkey "^j" history-search-forward
+
+bindkey -s "^e" "tmux-sessionizer^M"
+
 # if command -v "emacs" &> /dev/null; then bindkey -s "^[e" "emacsclient -c . &; disown %1; ^M"; fi
 if command -v "nvim" &> /dev/null; then bindkey -s "^[e" "nvim "; fi
 if command -v "neovide" &> /dev/null; then bindkey -s "^[E" "devour neovide . --nofork; "; fi
 if command -v "nautilus" &> /dev/null; then bindkey -s "^[n" "nautilus . &!; exit; "; fi
 # end
+
 
 # loop through and source all aliases files
 for aliases_file in $(\ls -a $HOME | \grep -E "\.aliases.*\.zsh"); do
@@ -145,26 +173,21 @@ eval "$(tmuxifier init -)"
 
 
 # Aliases
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
 alias v=nvim
-alias vi=nvim
+
 alias cdwin="cd /mnt/win/"
+
 alias tmux="tmux -u"
-alias la="ls -a"
-alias ll="ls -l"
-alias cat=bat
+
+# alias bat="bat --theme 1337 "
+
 alias p=python
 alias p3=python3
-alias c=clear
-alias clera=clear
-alias claer=clear
+
 alias quit=exit
-alias :q=exit
-alias qq=exit
-alias fuck="thefuck"
-alias F="thefuck"
-alias rgr="ranger"
 
 alias ls='eza --group-directories-first --icons'
 alias ll='eza --group-directories-first --icons -lh'
@@ -197,16 +220,9 @@ alias glob="git --no-pager log --oneline --graph -n 15"
 
 alias gst="git --no-pager stash"
 
-alias asdc="tmuxifier s asdc"
-alias asds="tmuxifier s asds"
-
 alias pacs="sudo pacman -S"
 alias pacq="pacman -Q"
 alias pacr="sudo pacman -R"
-
-alias edge="microsoft-edge-stable"
-
-alias sopy="source ./.venv/bin/activate"
 
 alias cpc="xclip -sel c < "
 alias gv="gwenview "
@@ -230,12 +246,16 @@ alias dol="dolphin "
 
 alias bd="blobdrop "
 
+alias open="xdg-open "
+
+
 # Run Fastfetch
 # if [[ -o interactive ]]; then
 #     # fastfetch -l small
 #     fastfetch --logo-width 49 --logo-height 23 --kitty ~/.config/fastfetch/pngs/MinimalistWaves_Sq_NoBG.png
 #     echo "\n"
 # fi
+
 
 TRANSIENT_PROMPT_PROMPT=" 
 %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
