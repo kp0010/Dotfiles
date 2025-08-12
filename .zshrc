@@ -274,4 +274,5 @@ function pushdots() {
     git add ./
     git commit -m "Update $(date '+%H%M_%d_%m')"
     git push origin main
+    cd -
 }
