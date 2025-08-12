@@ -267,3 +267,10 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}%1{✗%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 TRANSIENT_PROMPT_TRANSIENT_PROMPT=" %(?:%{$fg_bold[green]%}%1{➜%} "
+
+function pushdots() {
+    cd ~/Dotfiles/
+    stow --adopt .
+    git add ./
+    git commit -m "Update $(date '+%H%M_%d_%m')"
+}
