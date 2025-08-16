@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="avit" # set by `omz`
 
-plugins=(git postgres docker battery zsh-transient-prompt)
+plugins=(git postgres docker battery zsh-transient-prompt python)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,7 +138,7 @@ bindkey "^[[3~" delete-char
 # bindkey "^i" end-of-line
 # bindkey "^h" backward-word
 # bindkey "^l" forward-word
-bindkey "^y" autosuggest-accept
+# bindkey "^y" autosuggest-accept
 
 # bindkey "^H" backward-kill-word
 
@@ -276,3 +276,7 @@ function pushdots() {
     git push origin main
     cd -
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

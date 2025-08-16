@@ -24,6 +24,7 @@ vim.keymap.set({ "v", "n" }, "<leader>y", '"+y')
 vim.keymap.set({ "v", "n" }, "<leader>Y", '"+yg_')
 vim.keymap.set("n", "<leader>yy", '"+yyg_')
 vim.keymap.set("n", "<leader>yy", '"+yyg_')
+vim.keymap.set("n", "<leader>gy", "mzgg\"+yG'z")
 -----------------------------------------------------------------------
 
 -- Paste from Clipboard
