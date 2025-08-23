@@ -16,30 +16,6 @@ return {
 		},
 	},
 	{
-		"3rd/image.nvim",
-		build = false,
-		opts = {
-			processor = "magick_cli",
-		},
-		config = function()
-			require("image").setup({
-				backend = "kitty",
-				processor = "magick_cli",
-				tmux_show_only_in_active_window = true,
-				editor_only_render_when_focused = true,
-				window_overlap_clear_enabled = true,
-				integrations = {
-					html = {
-						enabled = true,
-					},
-					css = {
-						enabled = true,
-					},
-				},
-			})
-		end,
-	},
-	{
 		"folke/which-key.nvim",
 		event = "VimEnter",
 		config = function()

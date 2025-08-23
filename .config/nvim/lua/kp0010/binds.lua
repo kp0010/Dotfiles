@@ -171,3 +171,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-----------------------------------------------------------------------
+-- Toggle Wrap and Linebreak
+
+-- vim.keymap.set("n", "<leader>vw", ":set wrap!<Return>")
+vim.keymap.set("n", "<leader>vl", ":set linebreak!<Return>")

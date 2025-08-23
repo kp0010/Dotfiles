@@ -31,6 +31,38 @@ return {
 		},
 	},
 	{
+		"3rd/image.nvim",
+		build = false,
+		opts = {
+			processor = "magick_cli",
+		},
+		config = function()
+			require("image").setup({
+				backend = "kitty",
+				processor = "magick_cli",
+
+				tmux_show_only_in_active_window = true,
+				editor_only_render_when_focused = true,
+				window_overlap_clear_enabled = true,
+
+				integrations = {
+					markdown = {
+						enabled = true,
+						download_remote_images = true,
+						only_render_image_at_cursor = true,
+						only_render_image_at_cursor_mode = "inline",
+					},
+					html = {
+						enabled = true,
+					},
+					css = {
+						enabled = true,
+					},
+				},
+			})
+		end,
+	},
+	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		event = "VimEnter",
@@ -42,10 +74,10 @@ return {
 
 					-- component_separators = { left = "", right = "" },
 					-- section_separators = { left = "", right = "" },
-					-- component_separators = { left = "|", right = "|" },
-					-- section_separators = { left = " ", right = " " },
-					component_separators = { left = "\\", right = "\\" },
-					section_separators = { left = "", right = "" },
+					component_separators = { left = "|", right = "|" },
+					section_separators = { left = " ", right = " " },
+					-- component_separators = { left = "\\", right = "\\" },
+					-- section_separators = { left = "", right = "" },
 
 					disabled_filetypes = { "alpha", "neo-tree", "snacks_dashboard" },
 
@@ -166,40 +198,9 @@ return {
 		end,
 	},
 	{
-		"folke/trouble.nvim",
-		opts = {},
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xX",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xx",
-				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
-			},
-			{
-				"<leader>cl",
-				"<cmd>Trouble symbols toggle focus=false<cr>",
-				desc = "Symbols (Trouble)",
-			},
-			{
-				"<leader>cs",
-				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-				desc = "LSP Definitions / references / ... (Trouble)",
-			},
-			{
-				"<leader>xL",
-				"<cmd>Trouble loclist toggle<cr>",
-				desc = "Location List (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = { -- set to setup table
 		},
 	},
 	-- {
