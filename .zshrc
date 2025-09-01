@@ -37,11 +37,10 @@ setopt share_history
 # Ignore duplicate commands in history file
 setopt histignorealldups
 
-
 setopt autocd # type a dir to cfg
 setopt auto_param_slash # when a dir is completed, add a / instead of a trailing space
 setopt no_case_glob no_case_match # make cmp case insensitive
-setopt globdots # include dotfiles
+# setopt globdots # include dotfiles
 setopt extended_glob # match ~ # A
 setopt interactive_comments # allow comments in shell I
 unsetopt prompt_sp # don't autoclean blanklines
@@ -126,6 +125,13 @@ then
     unfunction preexec
     PS1='$ '
 fi
+
+
+autoload -U edit-command-line
+zle -N edit-command-line
+# bindkey '^xe' edit-command-line  # For Ctrl-x e
+bindkey '^x^e' edit-command-line # For Ctrl-x Ctrl-e
+
 
 # custom ZSH keybinds
 bindkey "^[[1;5C" forward-word
