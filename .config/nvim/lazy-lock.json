@@ -4,6 +4,7 @@
   "alpha-nvim": { "branch": "main", "commit": "a35468cd72645dbd52c0624ceead5f301c566dff" },
   "alternative.nvim": { "branch": "main", "commit": "966e8906b6243a82fea7f3869cda56fd8a0ef045" },
   "ashen.nvim": { "branch": "main", "commit": "638fbfe0845068cd49a7d6e0c9c1a34e91f899cd" },
+  "auto-session": { "branch": "main", "commit": "3b5d8947cf16ac582ef00443ede4cdd3dfa23af9" },
   "black-metal-theme-neovim": { "branch": "main", "commit": "1838337ce73a8de38e81bc40abe54f07b2380273" },
   "blink.nvim": { "branch": "main", "commit": "16a597e89cf2ee6215a392c5bc5a945477015534" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },

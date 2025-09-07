@@ -8,13 +8,13 @@ toggleBluetooth () {
 		bluetoothctl << EOF
 		power off
 EOF
-		notify-send --transient "Bluetooth Powered Off" "Powered off Bluetooth successfully" -i "bluetooth-disabled" -t 1000
+		notify-send --transient "Bluetooth Powered Off" "Powered off Bluetooth successfully" -i "bluetooth-disabled" -t 1000 -a "Bluetooth"
 		exit 0
 	else
 		bluetoothctl << EOF
 		power on
 EOF
-		notify-send --transient "Bluetooth Powered On" "Powered on Bluetooth successfully" -i "bluetooth-active" -t 1000
+		notify-send --transient "Bluetooth Powered On" "Powered on Bluetooth successfully" -i "bluetooth-active" -t 1000 -a "Bluetooth"
 		exit 0
 	fi
 }
@@ -29,7 +29,7 @@ connectToCMF ()
 		bluetoothctl << EOF
 		power on
 EOF
-	notify-send --transient "Bluetooth Powered On" "Connecting to CMF Buds..." -i "bluetooth-active" -t 1000
+	notify-send --transient "Bluetooth Powered On" "Connecting to CMF Buds..." -i "bluetooth-active" -t 1000 -a "Bluetooth"
 	fi
 
 	sleep 1
@@ -42,9 +42,9 @@ EOF
 	sleep 3
 
 	if bluetoothctl info $MacAddrCMF | grep -q "Connected: yes"; then
-		notify-send --transient "Bluetooth Connected" "Connected to CMD Buds successfully" -i "bluetooth-paired" -t 1000
+		notify-send --transient "Bluetooth Connected" "Connected to CMD Buds successfully" -i "bluetooth-paired" -t 1000 -a "Bluetooth"
 	else
-		notify-send --transient "Powered Bluetooth On" "Could not connect to CMD Buds" -i "bluetooth-active" -t 1000
+		notify-send --transient "Powered Bluetooth On" "Could not connect to CMD Buds" -i "bluetooth-active" -t 1000 -a "Bluetooth"
 	fi
 }
 

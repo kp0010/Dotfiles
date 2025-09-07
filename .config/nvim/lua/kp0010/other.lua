@@ -115,4 +115,17 @@ return {
 			})
 		end,
 	},
+	{
+		"rmagatti/auto-session",
+		lazy = false,
+
+		---@module "auto-session"
+		---@type AutoSession.Config
+		opts = {
+			auto_session_enabled = true,
+			auto_restore_enabled = true,
+			suppressed_dirs = { "~/", "~/Dev", "~/Downloads", "/" },
+			-- log_level = 'debug',
+		},
+	},
 }
