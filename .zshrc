@@ -177,6 +177,11 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
+if [ -n "$TMUX" ]; then
+    export WAYLAND_DISPLAY=$(printenv WAYLAND_DISPLAY)
+    export HYPRLAND_INSTANCE_SIGNATURE=$(printenv HYPRLAND_INSTANCE_SIGNATURE)
+fi
+
 # eval "$(starship init zsh)"
 
 
