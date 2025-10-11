@@ -1,8 +1,16 @@
 return {
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"windwp/nvim-ts-autotag",
-	"smjonas/inc-rename.nvim",
 	"numToStr/Comment.nvim",
+	{
+		"smjonas/inc-rename.nvim",
+		opts = {},
+		config = function()
+			require("inc_rename").setup({
+				input_buffer_type = "snacks",
+			})
+		end,
+	},
 	{
 		"saghen/blink.nvim",
 		build = "cargo build --release", -- for delimiters

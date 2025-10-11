@@ -1,0 +1,54 @@
+{
+	"name": "Vimium C",
+	"@time": "21/09/2025, 20:23:36",
+	"time": 1758466416437,
+	"environment": {
+		"extension": "2.12.3",
+		"platform": "linux",
+		"firefox": 141
+	},
+	"allBrowserUrls": true,
+	"exclusionRules": [
+		{
+			"passKeys": "- 0 1 2 3 4 5 6 7 8 9 = f j k l ",
+			"pattern": "^https://www\\.youtube\\.com/watch"
+		}
+	],
+	"grabBackFocus": true,
+	"hideHud": true,
+	"keyLayout": 18,
+	"keyMappings": [
+		"#!no-check",
+		"# Insert your preferred key mappings here.",
+		"unmapAll",
+		"map j scrollDown",
+		"map k scrollUp",
+		"map } goNext",
+		"map { goPrevious",
+		"",
+		"map gg scrollToTop",
+		"map G scrollToBottom",
+		"",
+		"map <a-j> nextTab",
+		"map <a-k> previousTab",
+		"",
+		"map ff LinkHints.activate",
+		"map yy LinkHints.activate",
+		"map F LinkHints.activateOpenInNewTab",
+		"map fF LinkHints.activateWithQueue",
+		"",
+		"map i enterInsertMode",
+		"",
+		"map I focusInput",
+		"map / enterFindMode",
+		"map n performFind",
+		"map N performBackwardsFind",
+		"",
+		"map <a-l> goForward",
+		"map <a-h> goBack",
+		""
+	],
+	"linkHintCharacters": "asdfjkl;",
+	"vimSync": true,
+	"ignoreCapsLock": 2
+}

@@ -56,7 +56,7 @@ return {
 						enabled = true,
 					},
 					css = {
-						enabled = true,
+						enabled = false,
 					},
 				},
 			})

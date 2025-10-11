@@ -180,6 +180,7 @@ eval "$(tmuxifier init -)"
 if [ -n "$TMUX" ]; then
     export WAYLAND_DISPLAY=$(printenv WAYLAND_DISPLAY)
     export HYPRLAND_INSTANCE_SIGNATURE=$(printenv HYPRLAND_INSTANCE_SIGNATURE)
+    export HELLO=$(printenv HELLO)
 fi
 
 # eval "$(starship init zsh)"
@@ -240,6 +241,7 @@ alias pacr="sudo pacman -R"
 alias cpc="xclip -sel c < "
 alias gv="gwenview "
 alias ff="firefox "
+alias zen="zen-browser "
 
 alias bye="shutdown now"
 alias brb="sudo reboot now"
