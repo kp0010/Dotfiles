@@ -177,3 +177,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- vim.keymap.set("n", "<leader>vw", ":set wrap!<Return>")
 vim.keymap.set("n", "<leader>vl", ":set linebreak!<Return>")
+-----------------------------------------------------------------------
+-- LSP Restart
+
+vim.keymap.set("n", "<leader>rs", ":LspRestart<Return>")

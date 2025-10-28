@@ -1,5 +1,6 @@
 #!/bin/bash
 MacAddrCMF=2C:BE:EB:E3:AB:D0
+MacAddrCMFa=3C:B0:ED:E7:73:32
 
 set -e
 
@@ -37,11 +38,13 @@ EOF
 	bluetoothctl << EOF 
 	trust $MacAddrCMF
 	connect $MacAddrCMF
+	trust $MacAddrCMFa
+	connect $MacAddrCMFa
 EOF
 
-	sleep 3
+	sleep 5
 
-	if bluetoothctl info $MacAddrCMF | grep -q "Connected: yes"; then
+	if bluetoothctl info $MacAddrCMF | grep -q "Connected: yes" || bluetoothctl info $MacAddrCMFa | grep -q "Connected: yes"; then
 		notify-send --transient "Bluetooth Connected" "Connected to CMD Buds successfully" -i "bluetooth-paired" -t 1000 -a "Bluetooth"
 	else
 		notify-send --transient "Powered Bluetooth On" "Could not connect to CMD Buds" -i "bluetooth-active" -t 1000 -a "Bluetooth"

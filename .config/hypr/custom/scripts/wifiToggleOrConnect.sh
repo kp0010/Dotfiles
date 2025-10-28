@@ -11,7 +11,7 @@ toggleWifi () {
 		nmcli radio wifi off
 	elif echo $nmcliDevResult | rg "wlan0[\s]+[\w]+[\s]+disconnected"; then 
 		notify-send "Connecting to $wifiSSID" -i "network-wireless-acquiring" -a "WiFi"
-		nmcli connection up $wifiSSID &
+		nmcli connection up $wifiSSID 
 		notify-send "Connected to $wifiSSID" -i "network-wireless-connected" -a "WiFi"
 	else 
 		notify-send "Connecting to TP-Link_9F66" "Powered on WiFi successfully" -i "network-wireless-acquiring" -a "WiFi"
