@@ -273,7 +273,7 @@ alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
 
 function gpush () {
     if (( $# > 0 )); then
-        git add $1
+        git add $2
     else
         git add ./
     fi
