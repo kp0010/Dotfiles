@@ -271,6 +271,16 @@ alias templ="cp ~/Dev/cpp/Leetcode/template.cpp ~/Dev/cpp/Leetcode/submit.cpp; v
 
 alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
 
+function gpush () {
+    if (( $# > 0 )); then
+        git add $1
+    else
+        git add ./
+    fi
+    git commit -m \"Update\"
+    git push origin main
+}
+
 # Run Fastfetch
 # if [[ -o interactive ]]; then
 #     # fastfetch -l small
