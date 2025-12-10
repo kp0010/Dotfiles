@@ -278,7 +278,7 @@ function gpush() {
         git add .;
     fi
     git commit -m \"Update\";
-    git push origin main
+    git push origin main;
 }
 
 # Run Fastfetch
