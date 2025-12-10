@@ -269,16 +269,16 @@ alias sopy="source ./.venv/bin/activate"
 
 alias templ="cp ~/Dev/cpp/Leetcode/template.cpp ~/Dev/cpp/Leetcode/submit.cpp; v ~/Dev/cpp/Leetcode/submit.cpp"
 
-alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
+# alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
 
 function gpush() {
     if (( $# > 0 )); then
-        git add $2;
+        git add $2
     else
-        git add .;
+        git add .
     fi
-    git commit -m \"Update\";
-    git push origin main;
+    git commit -m \"Update\"
+    git push origin main
 }
 
 # Run Fastfetch
