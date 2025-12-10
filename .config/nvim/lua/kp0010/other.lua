@@ -13,6 +13,9 @@ return {
 			picker = { provider = telescope },
 			---@type boolean
 			image_support = true,
+			editor = {
+				fold_imports = false,
+			},
 		},
 	},
 	{

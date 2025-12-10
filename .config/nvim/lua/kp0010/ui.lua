@@ -50,7 +50,8 @@ return {
 						enabled = true,
 						download_remote_images = true,
 						only_render_image_at_cursor = true,
-						only_render_image_at_cursor_mode = "inline",
+						only_render_image_at_cursor_mode = "popup",
+						floating_windows = true,
 					},
 					html = {
 						enabled = true,

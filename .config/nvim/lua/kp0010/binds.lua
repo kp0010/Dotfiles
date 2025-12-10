@@ -181,3 +181,8 @@ vim.keymap.set("n", "<leader>vl", ":set linebreak!<Return>")
 -- LSP Restart
 
 vim.keymap.set("n", "<leader>rs", ":LspRestart<Return>")
+
+-----------------------------------------------------------------------
+-- Blobdrop Current
+
+vim.keymap.set("n", "<leader>bd", ":!blobdrop %<Return>")

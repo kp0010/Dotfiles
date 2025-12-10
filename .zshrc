@@ -153,6 +153,8 @@ bindkey "^[[3~" delete-char
 
 bindkey -s "^e" "tmux-sessionizer^M"
 
+bindkey -s "^v" "picker.sh^M"
+
 # if command -v "emacs" &> /dev/null; then bindkey -s "^[e" "emacsclient -c . &; disown %1; ^M"; fi
 if command -v "nvim" &> /dev/null; then bindkey -s "^[e" "nvim "; fi
 if command -v "neovide" &> /dev/null; then bindkey -s "^[E" "devour neovide . --nofork; "; fi
@@ -263,6 +265,11 @@ alias bd="blobdrop "
 
 alias open="xdg-open "
 
+alias sopy="source ./.venv/bin/activate"
+
+alias templ="cp ~/Dev/cpp/Leetcode/template.cpp ~/Dev/cpp/Leetcode/submit.cpp; v ~/Dev/cpp/Leetcode/submit.cpp"
+
+alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
 
 # Run Fastfetch
 # if [[ -o interactive ]]; then
