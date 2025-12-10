@@ -151,6 +151,7 @@ configuration {
 	kb-custom-8: "Alt+8";
 	kb-custom-9: "Alt+9";
 	kb-custom-10: "Alt+0";
+
 	kb-custom-11: "Alt+exclam";
 	kb-custom-12: "Alt+at";
 	kb-custom-13: "Alt+numbersign";
