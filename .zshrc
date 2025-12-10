@@ -271,11 +271,11 @@ alias templ="cp ~/Dev/cpp/Leetcode/template.cpp ~/Dev/cpp/Leetcode/submit.cpp; v
 
 alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
 
-function gpush () {
+function gpush() {
     if (( $# > 0 )); then
         git add $2;
     else
-        git add ./;
+        git add .;
     fi
     git commit -m \"Update\";
     git push origin main
