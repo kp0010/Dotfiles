@@ -130,7 +130,7 @@ fi
 autoload -U edit-command-line
 zle -N edit-command-line
 # bindkey '^xe' edit-command-line  # For Ctrl-x e
-bindkey '^x^e' edit-command-line # For Ctrl-x Ctrl-e
+bindkey '^x' edit-command-line # For Ctrl-x Ctrl-e
 
 
 # custom ZSH keybinds
@@ -144,12 +144,12 @@ bindkey "^[[3~" delete-char
 # bindkey "^i" end-of-line
 # bindkey "^h" backward-word
 # bindkey "^l" forward-word
-# bindkey "^y" autosuggest-accept
+bindkey "^y" autosuggest-accept
 
 # bindkey "^H" backward-kill-word
 
-# bindkey "^k" history-search-backward
-# bindkey "^j" history-search-forward
+bindkey "^p" history-search-backward
+bindkey "^n" history-search-forward
 
 bindkey -s "^e" "tmux-sessionizer^M"
 
