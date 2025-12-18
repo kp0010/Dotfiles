@@ -205,9 +205,9 @@ alias p3=python3
 
 alias quit=exit
 
-alias ls='eza --group-directories-first --icons'
+alias ls='eza --group-directories-first --icons --width=80'
 alias ll='eza --group-directories-first --icons -lh'
-alias la='eza --group-directories-first --icons -a'
+alias la='eza --group-directories-first --icons -a --width=80'
 alias lla='eza --group-directories-first --icons -lah'
 alias lsa='eza --group-directories-first --icons -lah'
 alias lsf='ls | grep -i '
