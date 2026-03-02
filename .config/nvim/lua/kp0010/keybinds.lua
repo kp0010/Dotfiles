@@ -186,3 +186,8 @@ vim.keymap.set("n", "<leader>rs", ":LspRestart<Return>")
 -- Blobdrop Current
 
 vim.keymap.set("n", "<leader>bd", ":!blobdrop %<Return>")
+
+-----------------------------------------------------------------------
+-- Float Diagnostic
+
+vim.keymap.set("n", "<leader>fd", ":lua vim.diagnostic.open_float()<Return>")

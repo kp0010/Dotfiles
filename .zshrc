@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="robbyrussell" # set by `omz`
 # ZSH_THEME="avit" # set by `omz`
 
-plugins=(git postgres docker battery zsh-transient-prompt python)
+plugins=(git postgres docker battery zsh-transient-prompt python tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -269,7 +269,40 @@ alias sopy="source ./.venv/bin/activate"
 
 alias templ="cp ~/Dev/cpp/Leetcode/template.cpp ~/Dev/cpp/Leetcode/submit.cpp; v ~/Dev/cpp/Leetcode/submit.cpp"
 
-# alias gpush="git add ./ ; git commit -m \"Update\" ; git push origin main"
+
+function note () {
+    local NOTES_DIR="$HOME/Dev/notes"
+    mkdir -p "$NOTES_DIR"
+
+    # Use fzf to get both the search query and the selected file
+    # --print-query outputs what you typed on the first line
+    local FZF_OUT
+    FZF_OUT=$(eza -1 "$NOTES_DIR" | fzf --print-query --prompt="New Note Name / Search Note > " --height=40% --reverse)
+    
+    # Extract the query (what you typed) and the selection (what you picked)
+    local QUERY=$(echo "$FZF_OUT" | sed -n '1p')
+    local SELECTION=$(echo "$FZF_OUT" | sed -n '2p')
+
+    local FILENAME
+    if [ -n "$SELECTION" ]; then
+        # If you selected an existing file, open it
+        FILENAME="$NOTES_DIR/$SELECTION"
+    else
+        # If nothing was selected, create a new file
+        # local TIMESTAMP=$(date +'%Y-%m-%d_%H-%M')
+        local TIMESTAMP=$(date +'%y-%m-%d_%H-%M')
+        if [ -n "$QUERY" ]; then
+            # Use your query as the name
+            FILENAME="$NOTES_DIR/${QUERY}.md"
+        else
+            # Just use the timestamp if you hit Enter on an empty query
+            FILENAME="$NOTES_DIR/${TIMESTAMP}.md"
+        fi
+    fi
+
+    ${EDITOR:-nvim} "$FILENAME"
+}
+
 
 function gpush() {
     if (( $# > 0 )); then

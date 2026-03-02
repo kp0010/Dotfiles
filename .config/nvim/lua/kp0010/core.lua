@@ -34,4 +34,4 @@ require("lazy").setup({
 
 -----------------------------------------------------------------------
 require("kp0010.setup")
-require("kp0010.binds")
+require("kp0010.keybinds")
